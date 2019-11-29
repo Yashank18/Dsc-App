@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
             
             title: Text("Developer Student Clubs",style: TextStyle(color: Colors.black),),
             actions: <Widget>[
-              Icon(Icons.supervised_user_circle,color: Colors.black,size: 36.0,),
+              Icon(Icons.person ,color: Colors.black,size: 36.0,),
             ],
           ),
           //Curved Container
@@ -49,7 +49,7 @@ class newapp extends StatelessWidget{
               children: <Widget>[
                 Container(
                   height: 60.0,
-                  margin: new EdgeInsets.only(left: 90.0,right: 90.0,top: 80.0),
+                  margin: new EdgeInsets.only(left: 90.0,right: 90.0,top: 60.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(25.0)),
