@@ -56,7 +56,7 @@ class newapp extends StatelessWidget{
                   
                   ),
                   child: Center(
-                    child: Text("bckjd"),
+                    child: Text("Events",style: TextStyle(fontSize: 25.0),),
                   ),
                   
                 ),
@@ -68,7 +68,7 @@ class newapp extends StatelessWidget{
                   borderRadius: BorderRadius.all(Radius.circular(25.0)),
                   ),
                   child: Center(
-                    child: Text("bckjd"),
+                    child: Text("Leaderboard",style: TextStyle(fontSize: 25.0),),
                   ),
                   
                 ),
@@ -80,7 +80,7 @@ class newapp extends StatelessWidget{
                   borderRadius: BorderRadius.all(Radius.circular(25.0)),
                   ),
                   child: Center(
-                    child: Text("bckjd"),
+                    child: Text("Our Team",style: TextStyle(fontSize: 25.0),),
                   ),
                   
                 ),
