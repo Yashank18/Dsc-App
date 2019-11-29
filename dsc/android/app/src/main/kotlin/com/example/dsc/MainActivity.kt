@@ -1,4 +1,4 @@
-package com.example.dsc_chitkara
+package com.example.dsc
 
 import android.os.Bundle
 

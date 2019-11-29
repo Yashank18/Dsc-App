@@ -1,4 +1,4 @@
-# dsc_chitkara
+# dsc
 
 A new Flutter project.
 
