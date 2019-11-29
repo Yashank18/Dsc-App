@@ -43,9 +43,49 @@ class newapp extends StatelessWidget{
             height: 400,
             decoration: BoxDecoration(
               color: Colors.lightBlueAccent,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(95.0),topRight: Radius.circular(95.0))
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(100.0),topRight: Radius.circular(100.0)),
             ),
-          
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 60.0,
+                  margin: new EdgeInsets.only(left: 90.0,right: 90.0,top: 80.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                  
+                  ),
+                  child: Center(
+                    child: Text("bckjd"),
+                  ),
+                  
+                ),
+                 Container(
+                   height: 60.0,
+                  margin: new EdgeInsets.only(left: 90.0,right: 90.0,top: 30.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                  ),
+                  child: Center(
+                    child: Text("bckjd"),
+                  ),
+                  
+                ),
+                 Container(
+                 height: 60.0,
+                  margin: new EdgeInsets.only(left: 90.0,right: 90.0,top: 30.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                  ),
+                  child: Center(
+                    child: Text("bckjd"),
+                  ),
+                  
+                ),
+              ],
+            )
           )
         ],
       );
