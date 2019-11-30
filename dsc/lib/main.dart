@@ -7,30 +7,25 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
+    // here added app bar with white color
     return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.white,
+            appBar: AppBar(
+                 backgroundColor: Colors.white,
             
-            title: Text("Developer Student Clubs",style: TextStyle(color: Colors.black),),
-            actions: <Widget>[
-              Icon(Icons.person ,color: Colors.black,size: 36.0,),
-            ],
-          ),
-          //Curved Container
-          body: newapp(),
-         
-            
-            
-            
-          ),
-           
-        );
-        
-    
+                  title: Text("Developer Student Clubs",style: TextStyle(color: Colors.black),),
+                  actions: <Widget>[
+                      Icon(Icons.person ,color: Colors.black,size: 36.0,),
+                      ],
+            ),
+          //New widget call
+             body: newapp() 
+        )       
+    );
   }
 }
+
+
 class newapp extends StatelessWidget{
 
 @override
@@ -39,13 +34,16 @@ class newapp extends StatelessWidget{
       return ListView(
         children: <Widget>[
           Image.asset('assets/dsc.png'),
+          //Dsc image added can check it in pubspec.yaml
           Container(
             height: 400,
             decoration: BoxDecoration(
               color: Colors.lightBlueAccent,
+              // round bordered container
               borderRadius: BorderRadius.only(topLeft: Radius.circular(100.0),topRight: Radius.circular(100.0)),
             ),
             child: Column(
+              // buttons
               children: <Widget>[
                 Container(
                   height: 60.0,
