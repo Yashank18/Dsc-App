@@ -38,7 +38,8 @@ class newapp extends StatelessWidget{
           Container(
             height: 400,
             decoration: BoxDecoration(
-              color: Colors.lightBlueAccent,
+              // can be error here, used hexadecimal value of the color
+              color: Color(0xffC3E6E4),
               // round bordered container
               borderRadius: BorderRadius.only(topLeft: Radius.circular(100.0),topRight: Radius.circular(100.0)),
             ),
