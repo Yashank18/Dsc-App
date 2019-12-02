@@ -36,7 +36,7 @@ class newapp extends StatelessWidget{
           Image.asset('assets/dsc.png'),
           //Dsc image added can check it in pubspec.yaml
           Container(
-            height: 400,
+            height: MediaQuery.of(context).copyWith().size.height - 185.0,
             decoration: BoxDecoration(
               // can be error here, used hexadecimal value of the color
               color: Color(0xffC3E6E4),
