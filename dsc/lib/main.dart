@@ -33,10 +33,12 @@ class newapp extends StatelessWidget{
 
       return ListView(
         children: <Widget>[
+          
           Image.asset('assets/dsc.png'),
           //Dsc image added can check it in pubspec.yaml
           Container(
-            height: MediaQuery.of(context).copyWith().size.height - 185.0,
+          
+            height: MediaQuery.of(context).copyWith().size.height - 250,
             decoration: BoxDecoration(
               // can be error here, used hexadecimal value of the color
               color: Color(0xffC3E6E4),
@@ -44,6 +46,7 @@ class newapp extends StatelessWidget{
               borderRadius: BorderRadius.only(topLeft: Radius.circular(100.0),topRight: Radius.circular(100.0)),
             ),
             child: Column(
+              
               // buttons
               children: <Widget>[
                 Container(
