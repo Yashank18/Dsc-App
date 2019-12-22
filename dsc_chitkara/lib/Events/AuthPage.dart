@@ -39,8 +39,31 @@ import 'package:flutter/material.dart' as prefix0;
                             fontWeight: FontWeight.bold,
                         ),),
                         const SizedBox(height: 20.0,),
-                        Text("Official App for Developer Student Cluds - Chitkara University", textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0),)
+                        Text("Official App for Developer Student Cluds - Chitkara University", textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0),),
+                        const SizedBox(height:30.0),
 
+                        SizedBox(
+                          width: double.infinity,
+                          child: RaisedButton(
+                              elevation:0,
+                              highlightElevation: 0,
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                              child: Text("Create Account"),
+                              onPressed: (){},
+                          ),
+                        ),
+                        const SizedBox(height: 30.0,),
+                        Text.rich(TextSpan(
+                          children: [
+                            TextSpan(text: "Already have account? "),
+                            WidgetSpan(
+                              child: InkWell(
+                                child: Text("Log In", style: prefix0.TextStyle(fontWeight: FontWeight.bold),),
+                              )
+                            )
+                          ]
+                        ))
                       ],
                     ),
                   ),
