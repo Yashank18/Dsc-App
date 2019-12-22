@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-
-import 'package:flutter/material.dart' as prefix0;
-
- class LoginPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
 
   @override
@@ -59,7 +56,7 @@ import 'package:flutter/material.dart' as prefix0;
                             TextSpan(text: "Already have account? "),
                             WidgetSpan(
                               child: InkWell(
-                                child: Text("Log In", style: prefix0.TextStyle(fontWeight: FontWeight.bold),),
+                                child: Text("Log In", style: TextStyle(fontWeight: FontWeight.bold),),
                               )
                             )
                           ]
