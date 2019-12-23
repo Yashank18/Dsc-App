@@ -22,6 +22,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 50,),
               ListTile(
                 title: TextField(
+                  keyboardType: TextInputType.emailAddress,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     hintText: "Email Adress",
@@ -34,6 +35,7 @@ class LoginPage extends StatelessWidget {
               Divider(color: Colors.grey.shade600,),
               ListTile(
                 title: TextField(
+                  keyboardType: TextInputType.text,
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
