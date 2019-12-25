@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:dsc_chitkara/Authentication/signup.dart';
 class Auth extends StatelessWidget {
   const Auth({Key key}) : super(key: key);
 
@@ -18,7 +19,7 @@ class Auth extends StatelessWidget {
                   margin: const EdgeInsets.all(48.0),
                   padding: const EdgeInsets.symmetric(horizontal: 24.0,vertical: 48.0),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.tealAccent.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: BackdropFilter(
@@ -29,12 +30,18 @@ class Auth extends StatelessWidget {
                         //Icon in the box
                         Icon(Icons.account_circle,size: 64,color: Colors.grey.shade800,),
                         const SizedBox(height: 10.0,),
-                        Text("Welcome to DSC Chitkara",
-                        style:TextStyle(
-                            color: Colors.orange.shade700,
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold,
-                        ),),
+                        Center(
+
+                        child:
+                         Text("Welcome to DSC",
+                          style:TextStyle(
+                              color: Colors.orange.shade700,
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                              
+
+                          ),),
+                        ),
                         const SizedBox(height: 20.0,),
                         Text("Official App for Developer Student Cluds - Chitkara University", textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0),),
                         const SizedBox(height:30.0),
@@ -47,7 +54,12 @@ class Auth extends StatelessWidget {
                               color: Colors.white,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                               child: Text("Create Account"),
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SignupPage()),
+  );
+                              },
                           ),
                         ),
                         const SizedBox(height: 30.0,),

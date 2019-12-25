@@ -20,7 +20,7 @@ class SignupPage extends StatelessWidget {
               //have to add correct image source
               Container(width: 200,child: prefix0.Image.asset("assets/star.jpg"),),
               SizedBox(height: 50,),
-              Divider(color: Colors.grey.shade600,),
+              
               ListTile(
                 title: TextField(
                   keyboardType: TextInputType.text,
