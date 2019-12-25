@@ -1,3 +1,4 @@
+import 'package:dsc_chitkara/Authentication/login.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:dsc_chitkara/Authentication/signup.dart';
@@ -56,9 +57,9 @@ class Auth extends StatelessWidget {
                               child: Text("Create Account"),
                               onPressed: (){
                                 Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => SignupPage()),
-  );
+                                              context,
+                                              MaterialPageRoute(builder: (context) => SignupPage()),
+                                            );
                               },
                           ),
                         ),
@@ -69,6 +70,12 @@ class Auth extends StatelessWidget {
                             WidgetSpan(
                               child: InkWell(
                                 child: Text("Log In", style: TextStyle(fontWeight: FontWeight.bold),),
+                                onTap: (){
+                                  Navigator.push(
+                                              context,
+                                              MaterialPageRoute(builder: (context) => LoginPage()),
+                                            );
+                                },
                               )
                             )
                           ]

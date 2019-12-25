@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: 50,),
               //have to add correct image source
-              Container(width: 200,child: prefix0.Image.asset("assets/star.jpg"),),
+              Container(width: 200,child: prefix0.Image.asset("images/stars.jpg"),),
               SizedBox(height: 50,),
               ListTile(
                 title: TextField(
@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: (){},
                       color: Colors.cyan,
-                      child: Text("Logn",style: prefix0.TextStyle(color: Colors.white70),),
+                      child: Text("Login",style: prefix0.TextStyle(color: Colors.white70),),
                     ),
                   )
                 ],
