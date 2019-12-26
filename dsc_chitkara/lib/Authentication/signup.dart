@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 
-var _formKey =GlobalKey<FormState>();
+var _formKey2 =GlobalKey<FormState>();
 TextEditingController namecontroller = TextEditingController();
 TextEditingController batchcontroller = TextEditingController();
 TextEditingController passwordcontroller = TextEditingController();
@@ -26,11 +26,11 @@ class SignupPage extends StatelessWidget {
             );
           },
         ),
-        title: new Text('Login Page'),
+        title: new Text('Sign Page'),
         backgroundColor: Colors.blue,
       ),
           body: Form(
-            key: _formKey,
+            key: _formKey2,
             child: Container(
         decoration: new BoxDecoration(
               image: new DecorationImage(image: new AssetImage("images/stars.jpg"),fit: BoxFit.cover)
@@ -147,7 +147,7 @@ class SignupPage extends StatelessWidget {
                         Expanded(
                           child: RaisedButton(
                             onPressed: (){
-                              if(! _formKey.currentState.validate())
+                              if(! _formKey2.currentState.validate())
                               {
                                   print("Sign up complete");
                               }
