@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix0;
+import 'package:flutter/material.dart';
 import "Authentication/AuthPage.dart";
 import 'dart:ui';
 
@@ -37,7 +37,10 @@ class _MyAppState extends State<MyHomePage> {
             title: new Text("DSC"),
             actions: <Widget>[
               
-              Icon(Icons.account_circle,size: 36.0,),
+              FlatButton(child: Icon(Icons.account_circle,size: 36.0,),onPressed: (){ Navigator.push(
+                                              context,
+                                              MaterialPageRoute(builder: (context) => Auth()),
+                                            );},),
               
             ],
           ),
