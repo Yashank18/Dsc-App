@@ -27,7 +27,7 @@ class SignupPage extends StatelessWidget {
           },
         ),
         title: new Text('Sign Page'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
           body: Form(
             key: _formKey2,
@@ -152,8 +152,8 @@ class SignupPage extends StatelessWidget {
                                   print("Sign up complete");
                               }
                             },
-                            color: Colors.cyan,
-                            child: Text("SignUp",style: TextStyle(color: Colors.white70),),
+                            color: Color.fromRGBO(195, 230, 228, 1),
+                            child: Text("Sign Up",style: TextStyle(color: Colors.black),),
                           ),
                         ) 
                         ],

@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
           },
         ),
         title: new Text('Login Page'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
      body: Container(
        decoration: new BoxDecoration(
@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
                     Expanded(
                       child: RaisedButton(
                         onPressed: (){},
-                        color: Colors.cyan,
+                        color: Color.fromRGBO(195, 230, 228, 1),
                         child: Text("Login",style: prefix0.TextStyle(color: Colors.white70),),
                       ),
                     )
