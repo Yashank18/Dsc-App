@@ -1,5 +1,6 @@
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
 import 'package:dsc_chitkara/Authentication/login.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -10,11 +11,31 @@ TextEditingController batchcontroller = TextEditingController();
 TextEditingController passwordcontroller = TextEditingController();
 TextEditingController cpasswordcontroller = TextEditingController();
 TextEditingController emailcontroller = TextEditingController();
+String _email;
+String _password;
+String _batch;
+String _name;
+String _verify;
 class SignupPage extends StatelessWidget {
  const SignupPage({Key key}) : super(key: key);
 
   Widget _buildPageContent(BuildContext context){
-    
+
+    void validateandsave()
+    {
+      
+      try{
+          if(_formKey2.currentState.validate()){
+              print("Email enetered is:"+_email);
+          }
+
+      }
+      catch(e)
+      {
+        
+      }
+    }
+
     return Scaffold(
       appBar: new AppBar(
         leading: new FlatButton(
@@ -44,12 +65,17 @@ class SignupPage extends StatelessWidget {
               children: <Widget>[
                 Column(
                   children: <Widget>[
+                    
                     ListTile(
                       title: TextFormField(
                         controller: namecontroller,
-                        validator: (String value){
+                        
+                        validator: (value){
                           if(value.isEmpty){
                             return'Please enter Your name ';
+                          }
+                          else{
+                            _email=value;
                           }
                         },
                         keyboardType: TextInputType.text,
@@ -62,15 +88,21 @@ class SignupPage extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     Divider(color: Colors.grey.shade600,),
+
                     ListTile(
                       title: TextFormField(
                         controller: batchcontroller,
                          validator: (String value){
                           if(value.isEmpty){
                             return'Please enter your Batch';
+
                           }
-                        },
+                          else{
+                            _batch=value;
+                          }
+                        },                        
                         keyboardType: TextInputType.text,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
@@ -81,14 +113,16 @@ class SignupPage extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     Divider(color: Colors.grey.shade600,),
+
                     ListTile(
                       title: TextFormField(
                         controller: emailcontroller,
                          validator: (String value){
                           if(value.isEmpty){
                             return'Please enter Your name ';
-                          }
+                          }                        
                         },
                         keyboardType: TextInputType.emailAddress,
                         style: TextStyle(color: Colors.white),
@@ -107,8 +141,11 @@ class SignupPage extends StatelessWidget {
                          validator: (String value){
                           if(value.length<=5){
                             return 'Password should be more than 6';
+                          }                        
+                          else{
+                            _password=value;
                           }
-                        },
+                        },        
                         keyboardType: TextInputType.text,
                         obscureText: true,
                         style: TextStyle(color: Colors.white),
@@ -124,10 +161,12 @@ class SignupPage extends StatelessWidget {
                     ListTile(
                       title: TextFormField(
                         controller: cpasswordcontroller,
-                         validator: (String value){
-                          if(cpasswordcontroller!=passwordcontroller){
+                        validator: (String value){
+                          _verify=value;
+                          if(_verify!=_password){
                             return'Password Doesnot match';
                           }
+                        
                         },
                         keyboardType: TextInputType.text,
                         obscureText: true,
@@ -147,10 +186,7 @@ class SignupPage extends StatelessWidget {
                         Expanded(
                           child: RaisedButton(
                             onPressed: (){
-                              if(! _formKey2.currentState.validate())
-                              {
-                                  print("Sign up complete");
-                              }
+                              validateandsave;
                             },
                             color: Color.fromRGBO(195, 230, 228, 1),
                             child: Text("Sign Up",style: TextStyle(color: Colors.black),),

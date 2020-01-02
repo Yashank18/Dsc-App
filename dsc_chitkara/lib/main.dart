@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import "Authentication/AuthPage.dart";
 import 'dart:ui';
 
@@ -39,11 +38,7 @@ Map<int,Color> color={
 
 
 class MyHomePage extends StatefulWidget {
-
-
-  
-
-  MyHomePage({Key key}) : super(key: key);
+ MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -64,7 +59,9 @@ class _MyAppState extends State<MyHomePage> {
               FlatButton(child: Icon(Icons.account_circle,size: 36.0,),onPressed: (){ Navigator.push(
               context,
                  MaterialPageRoute(builder: (context) => Auth()),
-              );},),
+              );
+              },
+              ),
               
             ],
           ),
@@ -94,7 +91,21 @@ class _MyAppState extends State<MyHomePage> {
                           color: Colors.white,
                         ),
                       child: FlatButton(
-                         child: new Text("Upcoming Events",
+                         child: new Text("Upcoming Events",textAlign: TextAlign.center,
+                            style: TextStyle( fontSize: 24.0,),),
+                             onPressed: (){},
+                        ),
+                    ),
+                    SizedBox(height: 43.0,),
+                    Container(
+                        height: 70.0,
+                        width: 200.0,
+                        decoration: new BoxDecoration(
+                          borderRadius: new BorderRadius.all( const Radius.circular(75.0)),
+                          color: Colors.white,
+                        ),
+                      child: FlatButton(
+                         child: new Text("Past Events",textAlign: TextAlign.center,
                             style: TextStyle(
                                    fontSize: 24.0
                                  ),
@@ -113,7 +124,7 @@ class _MyAppState extends State<MyHomePage> {
                           color: Colors.white,
                         ),
                       child: FlatButton(
-                         child: new Text("Past Events",
+                         child: new Text("Our Team",textAlign: TextAlign.center,
                             style: TextStyle(
                                    fontSize: 24.0
                                  ),
@@ -123,26 +134,7 @@ class _MyAppState extends State<MyHomePage> {
                         onPressed: (){},
                       ),
                     ),
-                    SizedBox(height: 43.0,),
-                    Container(
-                        height: 70.0,
-                        width: 200.0,
-                        decoration: new BoxDecoration(
-                          borderRadius: new BorderRadius.all( const Radius.circular(75.0)),
-                          color: Colors.white,
-                        ),
-                      child: FlatButton(
-                         child: new Text("Upcoming Events",
-                            style: TextStyle(
-                                   fontSize: 24.0
-                                 ),
-                        
-                              ),
-                  
-                        onPressed: (){},
-                      ),
-                    ),
-                    SizedBox(height: 8.5,)
+                    Padding(padding: EdgeInsets.only(top: 50.0),)
                   ],
                 ),
               )

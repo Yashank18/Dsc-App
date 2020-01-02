@@ -1,4 +1,5 @@
 import 'package:dsc_chitkara/Authentication/login.dart';
+import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:dsc_chitkara/Authentication/signup.dart';
@@ -8,6 +9,20 @@ class Auth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: new AppBar(
+        leading: new FlatButton(
+          child: Icon(Icons.arrow_back_ios,),
+          onPressed: (){
+             Navigator.push(
+              context,
+               MaterialPageRoute(builder: (context) => MyApp()),
+            );
+          },
+        ),
+        title: new Text('Sign Page'),
+        backgroundColor: Color.fromRGBO(195, 230, 228, 1),
+
+      ),
       body: Container(
          decoration: new BoxDecoration(
           image: new DecorationImage(image: new AssetImage("images/stars.jpg"),fit: BoxFit.cover)
