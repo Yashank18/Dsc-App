@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 
-var _formKey2 =GlobalKey<FormState>();
+
 TextEditingController namecontroller = TextEditingController();
 TextEditingController batchcontroller = TextEditingController();
 TextEditingController passwordcontroller = TextEditingController();
@@ -25,9 +25,7 @@ class SignupPage extends StatelessWidget {
     {
       
       try{
-          if(_formKey2.currentState.validate()){
-              print("Email enetered is:"+_email);
-          }
+          
 
       }
       catch(e)
@@ -51,7 +49,7 @@ class SignupPage extends StatelessWidget {
         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
           body: Form(
-            key: _formKey2,
+           
             child: Container(
         decoration: new BoxDecoration(
               image: new DecorationImage(image: new AssetImage("images/stars.jpg"),fit: BoxFit.cover)

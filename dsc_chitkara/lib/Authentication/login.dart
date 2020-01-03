@@ -1,14 +1,27 @@
+import 'package:dsc_chitkara/Authentication/signup.dart';
+import 'package:dsc_chitkara/home.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart' as prefix0;
+
+var formkey = GlobalKey<FormState>();
+TextEditingController loginemailcontroller = TextEditingController();
+TextEditingController loginpasswordcontroller = TextEditingController();
+String _loginemail;
+String _loginpassword;
+final FirebaseAuth _auth = FirebaseAuth.instance;
+
+
 
 class LoginPage extends StatelessWidget {
    
   const LoginPage({Key key}) : super(key: key);
 
   Widget _buildPageContent(BuildContext context){
+   
     
     return Scaffold(
      appBar: new AppBar(
@@ -31,6 +44,7 @@ class LoginPage extends StatelessWidget {
       padding: EdgeInsets.all(20.0),
      
       child: Form(
+        key: formkey,
               child: ListView(
           children: <Widget>[
             Column(
@@ -49,6 +63,17 @@ class LoginPage extends StatelessWidget {
                       border: InputBorder.none,
                       icon: Icon(Icons.email,color: Colors.white30,)
                     ),
+                    controller: loginemailcontroller,
+                    validator: (String value){
+                          if(value.isEmpty){
+                            return'Please enter your registered email';
+
+                          }
+                          else{
+                            _loginemail=value;
+                          }
+                        }, 
+
                   ),
                 ),
                 Divider(color: Colors.grey.shade600,),
@@ -63,6 +88,17 @@ class LoginPage extends StatelessWidget {
                       border: InputBorder.none,
                       icon: Icon(Icons.lock,color: Colors.white30,)
                     ),
+                     controller: loginpasswordcontroller,
+                     
+                     validator: (String value){
+                          if(value.isEmpty){
+                            return'Please enter your Password';
+
+                          }
+                          else{
+                            
+                          }
+                        }, 
                   ),
                 ),
                 Divider(color: Colors.grey.shade600,),
@@ -71,7 +107,21 @@ class LoginPage extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: RaisedButton(
-                        onPressed: (){},
+                        onPressed: () async {
+                          _loginemail=loginemailcontroller.text;
+                          _loginpassword=loginpasswordcontroller.text;
+                         try{ final FirebaseUser user = (await _auth.signInWithEmailAndPassword(email: _loginemail,password: _loginpassword)).user;
+                                   Navigator.push(
+                                    context,
+                                     MaterialPageRoute(builder: (context) => HomeScreen()),
+                                     );
+                          print("Login Successfull with Username: $_loginemail and Password: $_loginpassword");
+                         }
+                         catch(e){
+                           print(e);
+                         }
+                          
+                        },
                         color: Color.fromRGBO(195, 230, 228, 1),
                         child: Text("Login",style: prefix0.TextStyle(color: Colors.white70),),
                       ),

@@ -1,4 +1,7 @@
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
+import 'package:dsc_chitkara/Splashscreen.dart';
+import 'package:dsc_chitkara/home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class profilePage extends StatefulWidget {
@@ -18,79 +21,145 @@ class _profilePageState extends State<profilePage> {
           onPressed: (){
              Navigator.push(
               context,
-               MaterialPageRoute(builder: (context) => Auth()),
+               MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
         ),
         title: new Text("Profile"),
+        actions: <Widget>[
+          FlatButton(
+            child: new Text("Sign Out"),
+            onPressed: ()async{
+             await FirebaseAuth.instance.signOut();
+             Navigator.push(
+              context,
+               MaterialPageRoute(builder: (context) => Auth()));
+            },
+          )
+        ],
         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
         
       ),
-      body: new Container(
-          child: Row(
+      body: SafeArea( //SafeArea is used to add necessary padding, to keep widget from being blocked by the system status bar, notches, holes, rounded corners.
+          child: Column(
             children: <Widget>[
-              new Center(child:Image.asset("images/dsc.png")),
-              new Column(
-                children: <Widget>[
-                  new Center(child: new Text("Yashank",style: new TextStyle(fontSize: 16.0,color: Colors.blue),),),
-                  new Center(child: new Text("CSE | 2nd Year",style: new TextStyle(fontSize: 16.0,color: Colors.blue)),),
-                  new Center(child: new Text("Level 1",style: new TextStyle(fontSize: 16.0,color: Colors.blue)),),
-                  
-                  new Container(
-                    child: Column(
-                      children: <Widget>[
-                        new Row(
-                          children: <Widget>[
-                            SizedBox(
-                              child: new Text("Batch 1"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                            Padding(padding: EdgeInsets.only(left: 5.0),),
-                            SizedBox(
-                              child: new Text("Batch 2"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                             Padding(padding: EdgeInsets.only(left: 5.0),),
-                            SizedBox(
-                              child: new Text("Batch 3"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                          ],
-                        ),
-                        new Row(
-                          children: <Widget>[
-                            SizedBox(
-                              child: new Text("Batch 4"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                            Padding(padding: EdgeInsets.only(left: 5.0),),
-                            SizedBox(
-                              child: new Text("Batch 5"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                             Padding(padding: EdgeInsets.only(left: 5.0),),
-                            SizedBox(
-                              child: new Text("Batch 6"),
-                              height: 15.0,
-                              width: 15.0,
-                            ),
-                          ],
-                        ),
-                        
-                      ],
-                    ),
-                  )
+             CircleAvatar( //A circle that represents a user.
+                radius:60.0,
+                backgroundImage: AssetImage('images/userp.png'),
+              ),
+              Text(
+                'Yashank',
+                  style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30.0,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '     Level-1 \nCSE | 2nd Year\n',
 
-                ],
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  color: Colors.grey,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              Text(
+                   'Batches Earned',
+                    style: TextStyle(
+                      fontFamily: 'verdana',
+                      fontSize: 30.0,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                      ),
+                ),
+              Container( //Container is used to add some styling properties.
+                padding: EdgeInsets.all(10.0), //EdgeInsets class specifies offsets in terms of visual edges, left, top, right, and bottom.
+                color: Color(0xffE6E6FA),
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded( //Expanded widget is used for child of a Row, Column, to expand and fill the available space along the main axis.
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          height: 80.0,
+                          width: 80.0,
+                        image: AssetImage('images/B1.jpg'),
+                    ),
+                      )
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          height: 80.0,
+                          width: 80.0,
+                          image: AssetImage('images/B2.jpg'), //To insert image from our images directory.
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          height: 80.0,
+                          width: 80.0,
+                          image: AssetImage('images/B3.jpg'),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+              Container(
+                padding: EdgeInsets.all(10.0),
+                color: Color(0xffE6E6FA),
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image(
+                            height: 80.0,
+                            width: 80.0,
+                            image: AssetImage('images/B1.jpg'),
+                          ),
+                        )
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          height: 80.0,
+                          width: 80.0,
+                          image: AssetImage('images/B2.jpg'),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          height: 80.0,
+                          width: 80.0,
+                          image: AssetImage('images/B3.jpg'),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ],
-          )
-      ),
+          ),
+        ),
+      
     );
   }
 
