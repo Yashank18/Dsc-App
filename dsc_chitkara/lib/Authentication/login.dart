@@ -65,7 +65,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     controller: loginemailcontroller,
                     validator: (String value){
-                          if(value.isEmpty){
+                          if(value.isEmpty || value.length<=9 ){
                             return'Please enter your registered email';
 
                           }
@@ -91,7 +91,7 @@ class LoginPage extends StatelessWidget {
                      controller: loginpasswordcontroller,
                      
                      validator: (String value){
-                          if(value.isEmpty){
+                          if(value.isEmpty || value.length<=6){
                             return'Please enter your Password';
 
                           }
@@ -115,6 +115,7 @@ class LoginPage extends StatelessWidget {
                                     context,
                                      MaterialPageRoute(builder: (context) => HomeScreen()),
                                      );
+                                     loginemailcontroller.clear();loginpasswordcontroller.clear();
                           print("Login Successfull with Username: $_loginemail and Password: $_loginpassword");
                          }
                          catch(e){

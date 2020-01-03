@@ -1,11 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
 import 'package:dsc_chitkara/Authentication/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+import '../home.dart';
 
 
+var formkey2 = GlobalKey<FormState>();
 TextEditingController namecontroller = TextEditingController();
 TextEditingController batchcontroller = TextEditingController();
 TextEditingController passwordcontroller = TextEditingController();
@@ -16,23 +20,16 @@ String _password;
 String _batch;
 String _name;
 String _verify;
+
+
+
+
 class SignupPage extends StatelessWidget {
  const SignupPage({Key key}) : super(key: key);
 
   Widget _buildPageContent(BuildContext context){
 
-    void validateandsave()
-    {
-      
-      try{
-          
-
-      }
-      catch(e)
-      {
-        
-      }
-    }
+    
 
     return Scaffold(
       appBar: new AppBar(
@@ -49,7 +46,7 @@ class SignupPage extends StatelessWidget {
         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
           body: Form(
-           
+           key: formkey2,
             child: Container(
         decoration: new BoxDecoration(
               image: new DecorationImage(image: new AssetImage("images/stars.jpg"),fit: BoxFit.cover)
@@ -68,7 +65,7 @@ class SignupPage extends StatelessWidget {
                       title: TextFormField(
                         controller: namecontroller,
                         
-                        validator: (value){
+                        validator: (String value){
                           if(value.isEmpty){
                             return'Please enter Your name ';
                           }
@@ -118,9 +115,13 @@ class SignupPage extends StatelessWidget {
                       title: TextFormField(
                         controller: emailcontroller,
                          validator: (String value){
+                           _email=value;
                           if(value.isEmpty){
-                            return'Please enter Your name ';
+                            return'Please enter Your email ';
                           }                        
+                          
+                            
+                          
                         },
                         keyboardType: TextInputType.emailAddress,
                         style: TextStyle(color: Colors.white),
@@ -183,8 +184,34 @@ class SignupPage extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                           child: RaisedButton(
-                            onPressed: (){
-                              validateandsave;
+                            onPressed: () async {
+                            if(formkey2.currentState.validate()){
+                              try{ 
+                               await FirebaseAuth.instance
+                              .createUserWithEmailAndPassword(
+                                  email: emailcontroller.text,
+                                  password: passwordcontroller.text)
+                              .then((currentUser) => Firestore.instance
+                                  .collection("users")
+                                  .document(namecontroller.text)
+                                  .setData({
+                                    
+                                    "fname": namecontroller.text,
+                                    "batch": batchcontroller.text,
+                                    "email": emailcontroller.text,
+                                  }));
+                                
+                                   Navigator.push(
+                                    context,
+                                     MaterialPageRoute(builder: (context) => HomeScreen()),
+                                     );
+                                     namecontroller.clear();emailcontroller.clear();passwordcontroller.clear();batchcontroller.clear();cpasswordcontroller.clear();
+                                     
+                          print("Login Successfull with Username:");
+                         }
+                         catch(e){
+                           print(e);
+                         }}
                             },
                             color: Color.fromRGBO(195, 230, 228, 1),
                             child: Text("Sign Up",style: TextStyle(color: Colors.black),),

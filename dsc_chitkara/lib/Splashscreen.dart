@@ -40,6 +40,7 @@ initState()
   Widget build(BuildContext context) {
     return Container(
        child: Scaffold(
+         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
          body: Center(
            child: Container(
              alignment: Alignment.center,
