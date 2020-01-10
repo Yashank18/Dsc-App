@@ -42,7 +42,7 @@ class SignupPage extends StatelessWidget {
             );
           },
         ),
-        title: new Text('Sign Page'),
+        title: new Text('Sign Up Page'),
         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
           body: Form(

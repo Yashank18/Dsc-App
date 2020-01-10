@@ -26,6 +26,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   cloud_firestore:
   firebase_auth:
+  font_awesome_flutter:
+  url_launcher:
+  cached_network_image:
   
 dev_dependencies:
   flutter_test:

@@ -4,7 +4,7 @@ import 'Authentication/login.dart';
 import 'dart:ui';
 
 import 'Authentication/signup.dart';
-import 'Splashscreen.dart';
+
 import 'home.dart';
 
 void main() => runApp(MyApp());
@@ -32,7 +32,7 @@ Map<int,Color> color={
   Widget build(BuildContext context) {
      MaterialColor colorCustom =MaterialColor(0xFFC3E6E4, color);
     return MaterialApp(
-      home: SplashPage(),
+      home: HomeScreen(),
       theme: new ThemeData(
         primarySwatch: colorCustom,
       ),

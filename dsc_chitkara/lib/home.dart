@@ -1,4 +1,7 @@
+import 'package:dsc_chitkara/pastevents.dart';
 import 'package:dsc_chitkara/profile.dart';
+import 'package:dsc_chitkara/teampage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import "Authentication/AuthPage.dart";
 import 'Authentication/login.dart';
@@ -26,6 +29,10 @@ Map<int,Color> color={
  
 
   @override
+
+
+ 
+
   Widget build(BuildContext context) {
      MaterialColor colorCustom =MaterialColor(0xFFC3E6E4, color);
     return MaterialApp(
@@ -44,6 +51,7 @@ class MyHomePage extends StatefulWidget {
  MyHomePage({Key key}) : super(key: key);
 //update the construstor to include uid
   @override
+  
   _HomeState createState() => _HomeState();
 }
 
@@ -52,6 +60,29 @@ class _HomeState extends State<MyHomePage> {
 
  
   @override
+   initState()
+{
+  FirebaseAuth.instance.
+  currentUser().
+  then((currentUser)=>{
+    if(currentUser==null)
+    {
+      Navigator.pushReplacementNamed(context, "/auth"),
+    }
+    else
+    {
+      Navigator.push(
+              context,
+               MaterialPageRoute(builder: (context) => HomeScreen()),
+            ),
+                        
+    }
+  })
+  .catchError((err)=>print(err));
+  super.initState();
+}
+
+
   Widget build(BuildContext context) {
      
    return  Scaffold(
@@ -60,8 +91,8 @@ class _HomeState extends State<MyHomePage> {
             actions: <Widget>[
               
               FlatButton(
-                              child: CircleAvatar(
-                  child: Text("A"),
+                child: CircleAvatar(
+                  child: Text("Y"),
                 ),
                 onPressed: (){
                    Navigator.push(
@@ -116,11 +147,14 @@ class _HomeState extends State<MyHomePage> {
                          child: new Text("Past Events",textAlign: TextAlign.center,
                             style: TextStyle(
                                    fontSize: 24.0
-                                 ),
-                        
-                              ),
+                                 ),),
                   
-                        onPressed: (){},
+                        onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context)=>pasteventpage())
+                              );
+                        },
                       ),
                     ),
                     SizedBox(height: 43.0,),
@@ -139,7 +173,12 @@ class _HomeState extends State<MyHomePage> {
                         
                               ),
                   
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(
+                      context,
+                        MaterialPageRoute(builder: (context) => teampage()),
+                         );
+                        },
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 50.0),)

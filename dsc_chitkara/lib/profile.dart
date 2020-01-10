@@ -1,5 +1,5 @@
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
-import 'package:dsc_chitkara/Splashscreen.dart';
+
 import 'package:dsc_chitkara/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
