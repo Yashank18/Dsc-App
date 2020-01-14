@@ -8,6 +8,8 @@ import "Authentication/AuthPage.dart";
 import 'Authentication/login.dart';
 import 'dart:ui';
 
+import 'Events.dart';
+
 
 String mytext="y";
 
@@ -98,7 +100,7 @@ class _HomeState extends State<MyHomePage> {
               
               FlatButton(
                 child: CircleAvatar(
-                  child: Text(mytext),
+                  child: Text(mytext[0].toUpperCase()),
                 ),
                 onPressed: (){
                    Navigator.push(
@@ -138,7 +140,12 @@ class _HomeState extends State<MyHomePage> {
                       child: FlatButton(
                          child: new Text("Upcoming Events",textAlign: TextAlign.center,
                             style: TextStyle( fontSize: 24.0,),),
-                             onPressed: (){},
+                             onPressed: (){
+                                Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context)=>eventpage())
+                              );
+                             },
                         ),
                     ),
                     SizedBox(height: 43.0,),

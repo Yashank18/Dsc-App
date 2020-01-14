@@ -7,7 +7,7 @@ import 'package:dsc_chitkara/Authentication/signup.dart';
 
 
 
-String mytext2="u";
+String mytext2="Updating...";
 class profilePage extends StatefulWidget {
   profilePage({Key key}) : super(key: key);
 

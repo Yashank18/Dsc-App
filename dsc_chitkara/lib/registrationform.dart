@@ -6,23 +6,19 @@ import 'Authentication/AuthPage.dart';
 import 'home.dart';
 
 
-
+String name="Loading";
+String emaill="Loading..";
+String batchh="Batch";
+String uploadevent="random";
+String uploademail="random";
+String uploaddate="random";
 
 var formkey3 = GlobalKey<FormState>();
-TextEditingController eventnamecontroller = TextEditingController();
-TextEditingController batchcontroller = TextEditingController();
-TextEditingController passwordcontroller = TextEditingController();
-TextEditingController cpasswordcontroller = TextEditingController();
-TextEditingController emailcontroller = TextEditingController();
-String _email;
-String _password;
-String _batch;
-String _name ;
-String _verify;
 
 class registrationpage extends StatefulWidget {
-  registrationpage({Key key}) : super(key: key);
-
+  registrationpage({Key key,this.event,this.datee}) : super(key: key);
+  String event;
+  String datee;
   @override
   _registrationpageState createState() => _registrationpageState();
 }
@@ -30,6 +26,20 @@ class registrationpage extends StatefulWidget {
 class _registrationpageState extends State<registrationpage> {
   @override
   Widget build(BuildContext context) {
+FirebaseAuth.instance.currentUser().then((currentUser)=>{
+    if(currentUser.email!=null)
+    {
+      emaill= currentUser.email,
+      
+      print(emaill)
+    }
+    else{
+      print("error profile")
+    }
+    
+                        
+    });
+
     return Scaffold(
       appBar: new AppBar(
         leading: new FlatButton(
@@ -41,7 +51,7 @@ class _registrationpageState extends State<registrationpage> {
             );
           },
         ),
-        title: new Text('Sign Up Page'),
+        title: new Text('Regster'),
         backgroundColor: Color.fromRGBO(195, 230, 228, 1),
       ),
           body: Form(
@@ -59,52 +69,29 @@ class _registrationpageState extends State<registrationpage> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-                    
                     ListTile(
                       title: TextFormField(
-                        controller: eventnamecontroller,
                         
-                        validator: (String value){
-                          if(value.isEmpty){
-                            return'Please enter Your name ';
-                          }
-                          else{
-                            _email=value;
-                          }
-                        },
-                        keyboardType: TextInputType.text,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: "Username",
-                          hintStyle: TextStyle(color: Colors.white70),
-                          border: InputBorder.none,
-                          icon: Icon(Icons.lock,color: Colors.white30,)
-                        ),
-                      ),
-                    ),
-
-                    Divider(color: Colors.grey.shade600,),
-
-                    ListTile(
-                      title: TextFormField(
-                        controller: batchcontroller,
                          validator: (String value){
                           if(value.isEmpty){
                             return'Please enter your Batch';
 
                           }
                           else{
-                            _batch=value;
+                           uploadevent= widget.event;
                           }
                         },                        
                         keyboardType: TextInputType.text,
                         style: TextStyle(color: Colors.white),
+                        enabled: false,
+                        initialValue: widget.event,
                         decoration: InputDecoration(
-                          hintText: "Course / Batch",
+                          
                           hintStyle: TextStyle(color: Colors.white70),
                           border: InputBorder.none,
                           icon: Icon(Icons.lock,color: Colors.white30,)
                         ),
+                        
                       ),
                     ),
 
@@ -112,12 +99,15 @@ class _registrationpageState extends State<registrationpage> {
 
                     ListTile(
                       title: TextFormField(
-                        controller: emailcontroller,
+                        
                          validator: (String value){
-                           _email=value;
+                           
                           if(value.isEmpty){
                             return'Please enter Your email ';
-                          }                        
+                          }      
+                          else{
+                              uploadevent=emaill;
+                          }                  
                           
                             
                           
@@ -125,27 +115,29 @@ class _registrationpageState extends State<registrationpage> {
                         keyboardType: TextInputType.emailAddress,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: "Email Adress",
+                          
                           hintStyle:TextStyle(color: Colors.white70),
                           border: InputBorder.none,
                           icon: Icon(Icons.email,color: Colors.white30,)
                         ),
+                        initialValue: emaill,
+                        enabled: false,
                       ),
                     ),
                     Divider(color: Colors.grey.shade600,),
                     ListTile(
                       title: TextFormField(
-                        controller: passwordcontroller,
+                        
                          validator: (String value){
-                          if(value.length<=5){
+                          if(value.length<=2){
                             return 'Password should be more than 6';
                           }                        
                           else{
-                            _password=value;
+                            uploaddate=widget.datee;
                           }
                         },        
                         keyboardType: TextInputType.text,
-                        obscureText: true,
+                        
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           hintText: "Password",
@@ -153,77 +145,37 @@ class _registrationpageState extends State<registrationpage> {
                           border: InputBorder.none,
                           icon: Icon(Icons.lock,color: Colors.white30,)
                         ),
+                        initialValue: widget.datee,
+                        enabled: false,
                       ),
                     ),
-                    Divider(color: Colors.grey.shade600,),
-                    ListTile(
-                      title: TextFormField(
-                        controller: cpasswordcontroller,
-                        validator: (String value){
-                          _verify=value;
-                          if(_verify!=_password){
-                            return'Password Doesnot match';
-                          }
-                        
-                        },
-                        keyboardType: TextInputType.text,
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: " Confirm Password",
-                          hintStyle:TextStyle(color: Colors.white70),
-                          border: InputBorder.none,
-                          icon: Icon(Icons.lock,color: Colors.white30,)
-                        ),
-                      ),
-                    ),
+                    
+                   
                      Divider(color: Colors.grey.shade600,),
                     SizedBox(height: 20,),
                     Row(
                       children: <Widget>[
                         Expanded(
                           child: RaisedButton(
-                            onPressed: () async {
-                              _email=emailcontroller.text;
-
-                            if(formkey3.currentState.validate()){
-                              try{ 
-                               await FirebaseAuth.instance
-                              .createUserWithEmailAndPassword(
-                                  email: emailcontroller.text,
-                                  password: passwordcontroller.text)
-                              .then((currentUser) => Firestore.instance
+                            onPressed: ()  {
+                              Firestore.instance
                                   .collection("users")
-                                  .document(emailcontroller.text)
+                                  .document(widget.event)
                                   .setData({
                                     
-                                    "eventname": eventnamecontroller.text,
-                                    "batch": batchcontroller.text,
-                                    "email": emailcontroller.text,
-                                  }));
-                                
-                                   Navigator.push(
-                                    context,
-                                     MaterialPageRoute(builder: (context) => MyHomePage()),
-                                     );
-                                     eventnamecontroller.clear();emailcontroller.clear();passwordcontroller.clear();batchcontroller.clear();cpasswordcontroller.clear();
-                                     
-                          print("Login Successfull with Username:");
-                         }
-                         catch(e){
-                           print(e);
-                         }}
+                                    "email": emaill,
+                                    "event": widget.event,
+                                    "date": widget.datee,
+                                  });
                             },
                             color: Color.fromRGBO(195, 230, 228, 1),
-                            child: Text("Sign Up",style: TextStyle(color: Colors.black),),
+                            child: Text("Register",style: TextStyle(color: Colors.black),),
                           ),
                         ) 
                         ],
                     ),
                     SizedBox(height: 40,),
-                     new Text("Already Have a Account?",
-                     style: TextStyle(color: Colors.white),
-                     ),
+                     
                   ],
                 )
               ],
