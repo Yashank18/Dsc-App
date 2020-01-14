@@ -18,7 +18,7 @@ TextEditingController emailcontroller = TextEditingController();
 String _email;
 String _password;
 String _batch;
-String _name;
+String _name ;
 String _verify;
 
 
@@ -185,6 +185,8 @@ class SignupPage extends StatelessWidget {
                         Expanded(
                           child: RaisedButton(
                             onPressed: () async {
+                              _email=emailcontroller.text;
+
                             if(formkey2.currentState.validate()){
                               try{ 
                                await FirebaseAuth.instance
@@ -193,7 +195,7 @@ class SignupPage extends StatelessWidget {
                                   password: passwordcontroller.text)
                               .then((currentUser) => Firestore.instance
                                   .collection("users")
-                                  .document(namecontroller.text)
+                                  .document(emailcontroller.text)
                                   .setData({
                                     
                                     "fname": namecontroller.text,
@@ -203,7 +205,7 @@ class SignupPage extends StatelessWidget {
                                 
                                    Navigator.push(
                                     context,
-                                     MaterialPageRoute(builder: (context) => HomeScreen()),
+                                     MaterialPageRoute(builder: (context) => MyHomePage()),
                                      );
                                      namecontroller.clear();emailcontroller.clear();passwordcontroller.clear();batchcontroller.clear();cpasswordcontroller.clear();
                                      

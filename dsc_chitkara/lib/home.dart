@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dsc_chitkara/pastevents.dart';
 import 'package:dsc_chitkara/profile.dart';
 import 'package:dsc_chitkara/teampage.dart';
@@ -8,7 +9,7 @@ import 'Authentication/login.dart';
 import 'dart:ui';
 
 
-
+String mytext="y";
 
 class HomeScreen extends StatelessWidget {
   // This widget is the root of your application.
@@ -50,6 +51,8 @@ Map<int,Color> color={
 class MyHomePage extends StatefulWidget {
  MyHomePage({Key key}) : super(key: key);
 //update the construstor to include uid
+  //include this
+
   @override
   
   _HomeState createState() => _HomeState();
@@ -59,32 +62,35 @@ class _HomeState extends State<MyHomePage> {
 
 
  
-  @override
-   initState()
-{
-  FirebaseAuth.instance.
-  currentUser().
-  then((currentUser)=>{
-    if(currentUser==null)
-    {
-      Navigator.pushReplacementNamed(context, "/auth"),
-    }
-    else
-    {
-      Navigator.push(
-              context,
-               MaterialPageRoute(builder: (context) => HomeScreen()),
-            ),
-                        
-    }
-  })
-  .catchError((err)=>print(err));
-  super.initState();
-}
 
+  
+  @override
+   initState() { 
+     
+  FirebaseAuth.instance.currentUser().then((currentUser)=>{
+    if(currentUser.email!=null)
+    {
+      mytext= currentUser.email,
+
+      print(mytext),
+    }
+    else{
+      print("error")
+    }
+    
+                        
+    });
+    
+
+    super.initState();
+    
+  }
+  
 
   Widget build(BuildContext context) {
-     
+
+   
+  
    return  Scaffold(
           appBar: new AppBar(
             title: new Text("DSC"),
@@ -92,7 +98,7 @@ class _HomeState extends State<MyHomePage> {
               
               FlatButton(
                 child: CircleAvatar(
-                  child: Text("Y"),
+                  child: Text(mytext),
                 ),
                 onPressed: (){
                    Navigator.push(

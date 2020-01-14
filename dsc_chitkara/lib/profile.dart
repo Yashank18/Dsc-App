@@ -1,9 +1,13 @@
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dsc_chitkara/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:dsc_chitkara/Authentication/signup.dart';
 
+
+
+String mytext2="u";
 class profilePage extends StatefulWidget {
   profilePage({Key key}) : super(key: key);
 
@@ -13,7 +17,28 @@ class profilePage extends StatefulWidget {
 
 class _profilePageState extends State<profilePage> {
   @override
+@override
+void initState() { 
+  
+  super.initState();
+  
+}
+
+
   Widget build(BuildContext context) {
+    FirebaseAuth.instance.currentUser().then((currentUser)=>{
+    if(currentUser.email!=null)
+    {
+      mytext2= currentUser.email,
+      print(mytext2)
+    }
+    else{
+      print("error profile")
+    }
+    
+                        
+    });
+  
     return Scaffold(
       appBar: new AppBar(
         leading: new FlatButton(
@@ -48,7 +73,7 @@ class _profilePageState extends State<profilePage> {
                 backgroundImage: AssetImage('images/userp.png'),
               ),
               Text(
-                'Yashank',
+                mytext2,
                   style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 30.0,

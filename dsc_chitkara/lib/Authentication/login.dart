@@ -110,10 +110,11 @@ class LoginPage extends StatelessWidget {
                         onPressed: () async {
                           _loginemail=loginemailcontroller.text;
                           _loginpassword=loginpasswordcontroller.text;
+                          print(_loginemail);
                          try{ final FirebaseUser user = (await _auth.signInWithEmailAndPassword(email: _loginemail,password: _loginpassword)).user;
                                    Navigator.push(
                                     context,
-                                     MaterialPageRoute(builder: (context) => HomeScreen()),
+                                     MaterialPageRoute(builder: (context) => MyHomePage()),
                                      );
                                      loginemailcontroller.clear();loginpasswordcontroller.clear();
                           print("Login Successfull with Username: $_loginemail and Password: $_loginpassword");

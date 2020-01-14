@@ -1,3 +1,4 @@
+import 'package:dsc_chitkara/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import "Authentication/AuthPage.dart";
 import 'Authentication/login.dart';
@@ -32,7 +33,7 @@ Map<int,Color> color={
   Widget build(BuildContext context) {
      MaterialColor colorCustom =MaterialColor(0xFFC3E6E4, color);
     return MaterialApp(
-      home: HomeScreen(),
+      home: SplashScreen(),
       theme: new ThemeData(
         primarySwatch: colorCustom,
       ),

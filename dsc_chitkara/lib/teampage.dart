@@ -1,11 +1,19 @@
 import 'package:dsc_chitkara/Authentication/AuthPage.dart';
 import 'package:dsc_chitkara/home.dart';
+import 'package:dsc_chitkara/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class teampage extends StatelessWidget {
+class teampage extends StatefulWidget {
+  const teampage({Key key}) : super(key: key);
+
+  @override
+  _teampageState createState() => _teampageState();
+}
+
+class _teampageState extends State<teampage> {
  Widget urlhandles(context) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,110 +57,109 @@ class teampage extends StatelessWidget {
           ],
         ),
       );
-  const teampage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  WillPopScope(
-      onWillPop: backPressed,
-   child: Scaffold(
-      appBar: new AppBar(
-        leading: new FlatButton(
-          child: Icon(Icons.arrow_back_ios,),
-          onPressed: (){
-             Navigator.push(
-              context,
-               MaterialPageRoute(builder: (context) => HomeScreen()),
+    return WillPopScope(
+      onWillPop: (){
+       Navigator.of(context).maybePop('/home');
+      },
+          child: Scaffold(
+        appBar: new AppBar(
+          leading: new FlatButton(
+            child: Icon(Icons.arrow_back_ios,),
+            onPressed: (){
+               Navigator.push(
+                context,
+                 MaterialPageRoute(builder: (context) => HomeScreen()),
+              );
+            },
+          ),
+          title: new Text('Team'),
+          backgroundColor: Color.fromRGBO(195, 230, 228, 1),
+        ),
+        body: ListView.builder(
+          shrinkWrap: true,
+          itemBuilder: (c, i) {
+            return Card(
+              elevation: 0.0,
+              child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ConstrainedBox(
+                        constraints: BoxConstraints.expand(
+                          height: MediaQuery.of(context).size.height * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.3,
+                        ),
+                        child: CachedNetworkImage(
+                          fit: BoxFit.cover,
+                          imageUrl: speakers[i].speakerImage,
+                        ),
+                        
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Text(
+                                  speakers[i].speakerName,
+                                  style: Theme.of(context).textTheme.title,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                AnimatedContainer(
+                                  duration: Duration(seconds: 1),
+                                  width: MediaQuery.of(context).size.width * 0.2,
+                                  height: 5,
+                                  color: Colors.red,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              speakers[i].speakerDesc,
+                              style: Theme.of(context).textTheme.subtitle,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              speakers[i].speakerWork,
+                              style: Theme.of(context).textTheme.caption,
+                            ),
+                            urlhandles(context),
+                          ],
+                        ),
+                      )
+                    ],
+                  )),
             );
           },
+          itemCount: speakers.length,
         ),
-        title: new Text('Team'),
-        backgroundColor: Color.fromRGBO(195, 230, 228, 1),
+        
       ),
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemBuilder: (c, i) {
-          return Card(
-            elevation: 0.0,
-            child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ConstrainedBox(
-                      constraints: BoxConstraints.expand(
-                        height: MediaQuery.of(context).size.height * 0.2,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                      ),
-                      child: CachedNetworkImage(
-                        fit: BoxFit.cover,
-                        imageUrl: speakers[i].speakerImage,
-                      ),
-                      
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              Text(
-                                speakers[i].speakerName,
-                                style: Theme.of(context).textTheme.title,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              AnimatedContainer(
-                                duration: Duration(seconds: 1),
-                                width: MediaQuery.of(context).size.width * 0.2,
-                                height: 5,
-                                color: Colors.red,
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            speakers[i].speakerDesc,
-                            style: Theme.of(context).textTheme.subtitle,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            speakers[i].speakerWork,
-                            style: Theme.of(context).textTheme.caption,
-                          ),
-                          urlhandles(context),
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-          );
-        },
-        itemCount: speakers.length,
-      ),
-      
-    ),
     );
+    
     
     
   }
 }
- Future<bool> backPressed()
- { Builder(context)=>
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
- }
+
 
 
 
