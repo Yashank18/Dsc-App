@@ -167,6 +167,11 @@ FirebaseAuth.instance.currentUser().then((currentUser)=>{
                                     "event": widget.event,
                                     "date": widget.datee,
                                   });
+                                   Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context)=>HomeScreen())
+                              );
+                                  ;
                             },
                             color: Color.fromRGBO(195, 230, 228, 1),
                             child: Text("Register",style: TextStyle(color: Colors.black),),
