@@ -37,33 +37,82 @@ class _MyHomeState extends State<MyHome> {
              Container(child: Image.asset("images/dsc_trans.png",width: 150.0,),
              color: Color.fromRGBO(39, 39, 47, 1),
              ),
-             SizedBox(height:70.0),
-             Center(child: Text("Welcome to DSC Chitkara",style: TextStyle(color:Color.fromRGBO(55, 239, 187, 1),fontSize: 25.0,fontWeight: FontWeight.bold),),),
-             SizedBox(height:20),
+             SizedBox(height:50.0),
              Column(
                children: <Widget>[
                   
                      Card(
-                       color: Colors.black,
+                       color: Color.fromRGBO(52, 52, 62, 1),
                        elevation: 8.0,
                       margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
                         child: ListTile(
                           contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                           leading: Container(
-                                decoration: new BoxDecoration(
-                                    border: new Border(
-                                        right: new BorderSide(width: 1.0, color: Colors.white24))),
-                                child: Icon(Icons.mood, color: Colors.white),
+                               
+                                child: Icon(Icons.event, color: Colors.green,size: 50,),
 
                               ),
-                              title: Text(
-                              "Number Of people Recovered",
-                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                              title: FlatButton(
+                                padding: EdgeInsets.only(left: 0),
+                              child:Text("Upcoming Events",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                              
                             ),
                             subtitle: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Icon(Icons.linear_scale, color: Colors.green),
-                                      Text("  Me",style: TextStyle(color:Colors.green),),
+                                      Text("   April - August 2020",style: TextStyle(color:Colors.green),),
+                                    ],
+                                  ),
+                        ),
+                     ),
+                     Card(
+                       color: Color.fromRGBO(52, 52, 62, 1),
+                       elevation: 8.0,
+                      margin: EdgeInsets.symmetric(horizontal:10.0,vertical:19.0),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                          leading: Container(
+                                
+                                   
+                                child: Icon(Icons.group_work, color: Colors.red,size: 50,),
+
+                              ),
+                              title: FlatButton(
+                                padding: EdgeInsets.only(left: 0),
+                              child:Text("Our Team",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                              
+                            ),
+                            subtitle: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Icon(Icons.linear_scale, color: Colors.red),
+                                      Text("   2020-2021",style: TextStyle(color:Colors.red),),
+                                    ],
+                                  ),
+                        ),
+                     ),
+                     Card(
+                      color: Color.fromRGBO(52, 52, 62, 1),
+                       elevation: 8.0,
+                      margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                          leading: Container(
+                                
+                                child: Icon(Icons.info_outline, color: Colors.blue.shade700,size: 50,),
+
+                              ),
+                              title: FlatButton(
+                                padding: EdgeInsets.only(left: 0),
+                              child:Text("About Us",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                              
+                            ),
+                            subtitle: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Icon(Icons.linear_scale, color: Colors.blue.shade700),
+                                      Text("   Our Story",style: TextStyle(color:Colors.blue.shade700),),
                                     ],
                                   ),
                         ),
