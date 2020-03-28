@@ -1,4 +1,5 @@
 import 'package:dsc_chitkara/events.dart';
+import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -90,6 +91,13 @@ class _MyHomeState extends State<MyHome> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => teampage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Our Team",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
