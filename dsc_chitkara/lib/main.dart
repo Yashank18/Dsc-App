@@ -1,3 +1,4 @@
+import 'package:dsc_chitkara/events.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +28,10 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: new AppBar(
+        backgroundColor: Color.fromRGBO(52, 52, 62, 1),
+        title: Text("Developer Student Clubs"),
+      ),
       body: Container(
         color: Color.fromRGBO(39, 39, 47, 1),
        child: Center(
@@ -53,6 +57,13 @@ class _MyHomeState extends State<MyHome> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Upcoming Events",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
