@@ -33,7 +33,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: 
 
+flutter_icons:
+  
+  android: true
+  ios: true
+  image_path: "images/llogo.jpg" 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -70,6 +76,8 @@ flutter:
    - images/simran.jpg
    - images/ishan.jpg
    - images/mridul.jpg
+   - images/llogo.jpg
+   - images/adi.jpg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

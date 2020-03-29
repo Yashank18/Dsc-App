@@ -231,11 +231,11 @@ List<Speaker> speakers = [
         "images/sourabh.jpg",
         speakerName: "Saurabh Thakur",
     speakerDesc: "DSC Lead",
-    speakerWork: "Software Engineer at SmallCase",
-    fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
-    linkedinUrl: "https://linkedin.com/in/",
-    twitterUrl: "https://twitter.com/yashank17",
+    speakerWork: "SDE at SmallCase",
+    fbUrl: "https://facebook.com/thakursaurabh1998",
+    githubUrl: "https://github.com/thakursaurabh1998",
+    linkedinUrl: "https://linkedin.com/in/thakursaurabh1998",
+    twitterUrl: "https://twitter.com/thakursaurabh1998",
   ),
   Speaker(
     speakerImage:
@@ -255,9 +255,9 @@ List<Speaker> speakers = [
     speakerDesc: "DSC Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
-    linkedinUrl: "https://linkedin.com/in/",
-    twitterUrl: "https://twitter.com/yashank17",
+    githubUrl: "https://github.com/goyalmuskan",
+    linkedinUrl: "https://linkedin.com/in/goyalmuskan",
+    twitterUrl: "https://twitter.com/",
   ),
   Speaker(
     speakerImage:
@@ -266,9 +266,9 @@ List<Speaker> speakers = [
     speakerDesc: "DSC Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
-    linkedinUrl: "https://linkedin.com/in/",
-    twitterUrl: "https://twitter.com/yashank17",
+    githubUrl: "https://github.com/saranshdawra",
+    linkedinUrl: "https://linkedin.com/in/SaranshDawra",
+    twitterUrl: "https://twitter.com/",
   ),
   Speaker(
     speakerImage:
@@ -277,8 +277,8 @@ List<Speaker> speakers = [
     speakerDesc: "DSC Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
-    linkedinUrl: "https://linkedin.com/in/",
+    githubUrl: "https://github.com/satvikchachra",
+    linkedinUrl: "https://linkedin.com/in/satvikchachra",
     twitterUrl: "https://twitter.com/yashank17",
   ),
   Speaker(
@@ -360,7 +360,7 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-        "images/anmol.jpg",
+        "images/adi.jpg",
        speakerName: "Aaditya",
     speakerDesc: "DSC Co-ordinator",
     speakerWork: "Graphic Designer",

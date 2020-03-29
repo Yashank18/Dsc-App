@@ -1,4 +1,5 @@
 import 'package:dsc_chitkara/main.dart';
+import 'package:dsc_chitkara/register.dart';
 import 'package:flutter/material.dart';
 
 class EventPage extends StatefulWidget {
@@ -42,8 +43,15 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                 onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
-                              child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                              child:Text("Event 1 Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
                             ),
                             subtitle: Row(
@@ -68,6 +76,13 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Event name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
@@ -93,6 +108,13 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
@@ -118,6 +140,13 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
@@ -144,6 +173,13 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Event name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
@@ -169,6 +205,13 @@ class _EventPageState extends State<EventPage> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => registerPage()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
