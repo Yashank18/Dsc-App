@@ -21,6 +21,7 @@ class _teampageState extends State<teampage> {
               icon: Icon(
                 FontAwesomeIcons.facebookF,
                 size: 15,
+                color:Colors.indigo
               ),
               onPressed: () {
                 launch(speakers[0].fbUrl);
@@ -30,6 +31,7 @@ class _teampageState extends State<teampage> {
               icon: Icon(
                 FontAwesomeIcons.twitter,
                 size: 15,
+                color:Colors.blue.shade100
               ),
               onPressed: () {
                 launch(speakers[0].twitterUrl);
@@ -39,6 +41,7 @@ class _teampageState extends State<teampage> {
               icon: Icon(
                 FontAwesomeIcons.linkedinIn,
                 size: 15,
+                color:Colors.blue.shade700
               ),
               onPressed: () {
                 launch(speakers[0].linkedinUrl);
@@ -48,6 +51,7 @@ class _teampageState extends State<teampage> {
               icon: Icon(
                 FontAwesomeIcons.github,
                 size: 15,
+                color:Colors.white
               ),
               onPressed: () {
                 launch(speakers[0].githubUrl);
@@ -66,7 +70,7 @@ class _teampageState extends State<teampage> {
           child: Scaffold(
         appBar: new AppBar(
           leading: new FlatButton(
-            child: Icon(Icons.arrow_back_ios,),
+            child: Icon(Icons.arrow_back_ios,color: Colors.white),
             onPressed: (){
                Navigator.push(
                 context,
@@ -115,7 +119,7 @@ class _teampageState extends State<teampage> {
                                 children: <Widget>[
                                   Text(
                                     speakers[i].speakerName,
-                                    style: TextStyle(color:Colors.white,fontSize:25.0),
+                                    style: TextStyle(color:Color.fromRGBO(55, 239, 187, 1),fontSize:25.0),
                                   ),
                                   SizedBox(
                                     height: 5,
@@ -124,7 +128,7 @@ class _teampageState extends State<teampage> {
                                     duration: Duration(seconds: 1),
                                     width: MediaQuery.of(context).size.width * 0.3,
                                     height: 5,
-                                    color: Colors.red,
+                                    color: Color.fromRGBO(251, 219, 134, 1),
                                   ),
                                 ],
                               ),
@@ -140,7 +144,7 @@ class _teampageState extends State<teampage> {
                               ),
                               Text(
                                 speakers[i].speakerWork,
-                                style:TextStyle(color:Colors.white,fontSize:12.0),
+                                style:TextStyle(color:Colors.red,fontSize:12.0),
                               ),
                               urlhandles(context),
                             ],
@@ -224,10 +228,10 @@ class Speaker {
 List<Speaker> speakers = [
   Speaker(
     speakerImage:
-        "images/dsc.png",
-        speakerName: "Yashank",
-    speakerDesc: "DSC Member",
-    speakerWork: "Flutter Developer",
+        "images/sourabh.jpg",
+        speakerName: "Saurabh Thakur",
+    speakerDesc: "DSC Lead",
+    speakerWork: "Software Engineer at SmallCase",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/Yashank18",
     linkedinUrl: "https://linkedin.com/in/",
@@ -235,7 +239,7 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-       "images/dsc.png",
+       "images/yashank.jpg",
        speakerName: "Yashank",
     speakerDesc: "DSC Member",
     speakerWork: "Flutter Developer",
@@ -246,10 +250,10 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-        "images/dsc.png",
-       speakerName: "Yashank",
+        "images/muskan.jpg",
+       speakerName: "Muskan Goyal",
     speakerDesc: "DSC Member",
-    speakerWork: "Flutter Developer",
+    speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/Yashank18",
     linkedinUrl: "https://linkedin.com/in/",
@@ -257,10 +261,10 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-        "images/dsc.png",
-       speakerName: "Yashank",
+        "images/saransh.jpg",
+       speakerName: "Saransh",
     speakerDesc: "DSC Member",
-    speakerWork: "Flutter Developer",
+    speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/Yashank18",
     linkedinUrl: "https://linkedin.com/in/",
@@ -268,10 +272,10 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-       "images/dsc.png",
-       speakerName: "Yashank",
+       "images/satvik.jpg",
+       speakerName: "Satvik",
     speakerDesc: "DSC Member",
-    speakerWork: "Flutter Developer",
+    speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/Yashank18",
     linkedinUrl: "https://linkedin.com/in/",
@@ -279,35 +283,113 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-      "images/dsc.png",
-       speakerName: "Yashank",
+        "images/ishaan.jpg",
+       speakerName: "Ishaan",
+    speakerDesc: "DSC Member",
+    speakerWork: "Public Relations",
+    fbUrl: "https://www.facebook.com/",
+    githubUrl: "https://github.com/ishaan2908",
+    linkedinUrl: "https://linkedin.com/in/ishaan2908",
+    twitterUrl: "https://twitter.com/",
+  ),
+  Speaker(
+    speakerImage:
+      "images/sahil.jpg",
+       speakerName: "Sahildeep",
+    speakerDesc: "DSC Member",
+    speakerWork: "Frontend Developer",
+    fbUrl: "https://facebook.com/sForSaahil",
+    githubUrl: "https://github.com/sahilcodes",
+    linkedinUrl: "https://linkedin.com/in/sahilcodes",
+    twitterUrl: "https://twitter.com/oyesaahil",
+  ),
+  Speaker(
+    speakerImage:
+      "images/ishan.jpg",
+       speakerName: "Ishan Sharma",
+    speakerDesc: "DSC Member",
+    speakerWork: "Frontend Developer",
+    fbUrl: "https://facebook.com/",
+    githubUrl: "https://github.com/ishandeveloper",
+    linkedinUrl: "https://linkedin.com/in/ishandeveloper",
+    twitterUrl: "https://twitter.com/",
+  ),
+  Speaker(
+    speakerImage:
+       "images/kushal.jpg",
+       speakerName: "Kushal Bhanot",
+    speakerDesc: "DSC Member",
+    speakerWork: "Frontend Developer",
+    fbUrl: "https://facebook.com/kushal.bhanot.98",
+    githubUrl: "https://github.com/KushalBhanot",
+    linkedinUrl: "https://linkedin.com/in/kushal-bhanot-5495aa88",
+    twitterUrl: "https://twitter.com/BhanotKushal",
+  ),
+  Speaker(
+    speakerImage:
+        "images/anmol.jpg",
+       speakerName: "Anmol",
     speakerDesc: "DSC Member",
     speakerWork: "Flutter Developer",
-    fbUrl: "https://facebook.com/",
+    fbUrl: "https://www.facebook.com/anmol.dx.5",
     githubUrl: "https://github.com/Yashank18",
     linkedinUrl: "https://linkedin.com/in/",
     twitterUrl: "https://twitter.com/yashank17",
   ),
   Speaker(
     speakerImage:
-       "images/dsc.png",
-       speakerName: "Yashank",
+        "images/mridul.jpg",
+       speakerName: "Mridul Bhatia",
     speakerDesc: "DSC Member",
-    speakerWork: "Flutter Developer",
-    fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
+    speakerWork: "Video Editor",
+    fbUrl: "https://www.facebook.com/mridul.bhatia.54",
+    githubUrl: "https://github.com/mridulbhatia0007",
     linkedinUrl: "https://linkedin.com/in/",
-    twitterUrl: "https://twitter.com/yashank17",
+    twitterUrl: "https://twitter.com/",
   ),
   Speaker(
     speakerImage:
-        "images/dsc.png",
-       speakerName: "Yashank",
+        "images/simran.jpg",
+       speakerName: "Simran",
     speakerDesc: "DSC Member",
     speakerWork: "Flutter Developer",
-    fbUrl: "https://facebook.com/",
-    githubUrl: "https://github.com/Yashank18",
-    linkedinUrl: "https://linkedin.com/in/",
-    twitterUrl: "https://twitter.com/yashank17",
+    fbUrl: "https://www.facebook.com/",
+    githubUrl: "https://github.com/simransrivastava01",
+    linkedinUrl: "https://linkedin.com/in/simran-shrivastava-1b7b15193",
+    twitterUrl: "https://twitter.com/SimranS49844946",
   ),
+  Speaker(
+    speakerImage:
+        "images/anmol.jpg",
+       speakerName: "Aaditya",
+    speakerDesc: "DSC Co-ordinator",
+    speakerWork: "Graphic Designer",
+    fbUrl: "https://www.facebook.com/",
+    githubUrl: "https://github.com/adityasingh7715",
+    linkedinUrl: "https://linkedin.com/in/aditya-singh-886866193",
+    twitterUrl: "https://twitter.com/adityasingh7716",
+  ),
+  Speaker(
+    speakerImage:
+        "images/tanishq.jpg",
+       speakerName: "Tanishq",
+    speakerDesc: "DSC Co-ordinator",
+    speakerWork: "Web ",
+    fbUrl: "https://www.facebook.com/tanishq.singla.102",
+    githubUrl: "https://github.com/TanishqSingla",
+    linkedinUrl: "https://linkedin.com/in/tanishq-singla-520431192",
+    twitterUrl: "https://twitter.com/mainTanishq",
+  ),
+  Speaker(
+    speakerImage:
+        "images/sahu.jpg",
+       speakerName: "Saurabh Sahu",
+    speakerDesc: "DSC Co-ordinator",
+    speakerWork: "Web",
+    fbUrl: "https://www.facebook.com/",
+    githubUrl: "https://github.com/ssbeast",
+    linkedinUrl: "https://linkedin.com/in/saurabh-sahu-a45634191",
+    twitterUrl: "https://twitter.com/Saurabh10725385",
+  ),
+  
 ];

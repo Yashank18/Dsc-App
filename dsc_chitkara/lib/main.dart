@@ -1,3 +1,4 @@
+import 'package:dsc_chitkara/aboutUs.dart';
 import 'package:dsc_chitkara/events.dart';
 import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
@@ -123,6 +124,13 @@ class _MyHomeState extends State<MyHome> {
 
                               ),
                               title: FlatButton(
+                                onPressed: (){
+                                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AboutUs()),
+                            );
+                                },
                                 padding: EdgeInsets.only(left: 0),
                               child:Text("About Us",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                               
