@@ -1,12 +1,12 @@
 # Dsc-App
-Steps to Contribute ->
-
-(i) Fork the Repo.
-(ii) Make your Changes.
-(iii) Push your code. 
-(iv) Create a Push request.
-(v) It will be merged if there is no issue.
-(vi) Keep pulling code so that your code is upto-date.
 
 
-Keep Pushing :)
+Pull requests:- 
+
+1.Match the document style as closely as possible.
+2.Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
+3.Pull requests must be made against master branch for this particular repository.
+4.Check for existing issues first, before filing an issue.
+5.Make sure you follow the set standard as all other projects in this repo do
+  Have fun!
+
