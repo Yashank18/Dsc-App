@@ -50,6 +50,7 @@ int _currentPage = 0;
   
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Color.fromRGBO(52, 52, 62, 1),
@@ -65,43 +66,19 @@ int _currentPage = 0;
       ),
       body: Container(
         color: Color.fromRGBO(39, 39, 47, 1),
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                child: Stack(
-                  alignment: AlignmentDirectional.center,
-                  children: <Widget>[
-                    PageView.builder(
+        child: 
+            
+                    ListView(
+                      children: <Widget>[
+                        Container( height: screenHeight*0.35,
+            child: PageView.builder(
                       scrollDirection: Axis.horizontal,
                       controller: _pageController,
                       onPageChanged: _onPageChanged,
                       itemCount: slideList.length,
                       itemBuilder: (ctx, i) => SlideItem(i),
-                    ),
-                    Stack(
-                      alignment: AlignmentDirectional.topStart,
-                      children: <Widget>[
-                        Container(
-                          margin: const EdgeInsets.only(bottom: 35),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              for(int i = 0; i<slideList.length; i++)
-                                if( i == _currentPage )
-                                  SlideDots(true)
-                                else
-                                  SlideDots(false)
-                            ],
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              /*SizedBox(height:20),
+                    ),),
+                          SizedBox(height:20),
               Card(
                        color: Color.fromRGBO(52, 52, 62, 1),
                        elevation: 8.0,
@@ -295,10 +272,15 @@ int _currentPage = 0;
                                     ],
                                   ),
                         ),
-                     ),*/
-            ],
-          )
-        ),
+                     ),
+                      ],
+                    )
+          
+        
+              
+              /**/
+            
+        
       ),
     );
   }
