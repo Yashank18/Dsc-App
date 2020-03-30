@@ -1,6 +1,6 @@
 import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class resources extends StatefulWidget {
   resources({Key key}) : super(key: key);
@@ -36,7 +36,9 @@ class _resourcesState extends State<resources> {
             elevation: 4.0,
             child: InkWell(
                 splashColor: Colors.grey.withAlpha(90),
-            onTap: () {},
+            onTap: () {
+              launch("https://pub.dev/packages/url_launcher#-readme-tab-");
+            },
             child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
              mainAxisSize: MainAxisSize.min,
@@ -88,7 +90,7 @@ class Titles {
  
   String myheading;
   String mydescription;
-  
+  String url;
   String myimage;
 
   Titles(
@@ -96,7 +98,7 @@ class Titles {
      
       this.myheading,
       this.mydescription,
-     
+      this.url,
       this.myimage
     }
   );
@@ -104,7 +106,7 @@ class Titles {
     
     myheading = json['myheading'];
     mydescription = json['mydescription'];
-    
+    url=json['url'];
     myimage = json['myicon'];
   }
 Map<String, dynamic> toJson() {
@@ -112,7 +114,7 @@ Map<String, dynamic> toJson() {
    
     data['myheading']=this.myheading;
     data['mydescription']=this.mydescription;
-    
+    data['url']=this.url;
     data['myimage']=this.myimage;
     return data;
   }
@@ -123,7 +125,7 @@ List<Titles> title=[
    
     mydescription: "  April-August 2020",
     myheading: "Upcoming Events",
-    
+    url:"",
     myimage: 'images/sahu.jpg',
 
   ),
