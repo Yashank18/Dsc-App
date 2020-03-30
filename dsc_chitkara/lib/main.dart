@@ -1,5 +1,6 @@
 import 'package:dsc_chitkara/aboutUs.dart';
 import 'package:dsc_chitkara/events.dart';
+import 'package:dsc_chitkara/resources.dart';
 import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     '/screen1': (BuildContext context) => EventPage(),
     '/screen2' : (BuildContext context) => AboutUs(),
     '/screen3' : (BuildContext context) => teampage(),
+    '/screen4':  (BuildContext context) => resources(),
     
   },
     );
@@ -148,7 +150,7 @@ List<Titles> title=[
     mydescription: "  To learn",
     myheading: "Resources",
      myicon: Icon(Icons.event,color: Colors.blue,size:50),
-    myroute: '/screen1',
+    myroute: '/screen4',
 
   ),
   Titles(
