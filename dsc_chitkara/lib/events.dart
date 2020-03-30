@@ -1,6 +1,7 @@
 import 'package:dsc_chitkara/main.dart';
 import 'package:dsc_chitkara/register.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class EventPage extends StatefulWidget {
   EventPage({Key key}) : super(key: key);
@@ -10,6 +11,8 @@ class EventPage extends StatefulWidget {
 }
 
 class _EventPageState extends State<EventPage> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
