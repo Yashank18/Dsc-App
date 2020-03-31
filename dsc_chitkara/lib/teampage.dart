@@ -2,6 +2,7 @@ import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class teampage extends StatefulWidget {
   const teampage({Key key}) : super(key: key);
@@ -96,7 +97,10 @@ class _teampageState extends State<teampage> {
                             height: MediaQuery.of(context).size.height * 0.2,
                             width: MediaQuery.of(context).size.width * 0.3,
                           ),
-                          child: Image.asset(speakers[i].speakerImage,),
+                          child: Image(
+                      image: CachedNetworkImageProvider(
+                        speakers[i].speakerImage,
+                      ),),
                           
                         ),
                         SizedBox(
@@ -224,7 +228,7 @@ class Speaker {
 List<Speaker> speakers = [
   Speaker(
     speakerImage:
-        "images/sourabh.jpg",
+        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sourabh.jpg",
         speakerName: "Saurabh Thakur",
     speakerDesc: "DSC Lead",
     speakerWork: "SDE at SmallCase",
@@ -235,7 +239,7 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-       "images/yashank.jpg",
+       "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/yashank.jpg",
        speakerName: "Yashank",
     speakerDesc: "DSC Member",
     speakerWork: "Flutter Developer",
@@ -246,7 +250,7 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-        "images/muskan.jpg",
+        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/muskan.jpg",
        speakerName: "Muskan Goyal",
     speakerDesc: "DSC Member",
     speakerWork: "Frontend Developer",
