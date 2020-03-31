@@ -13,78 +13,86 @@ class resources extends StatefulWidget {
 class _resourcesState extends State<resources> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Color.fromRGBO(52, 52, 62, 1),
-        leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.white,),onPressed: (){
-                                  Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MyApp()),
-                            );
-                                },),
-        title: Text("Resources"),
-        
-      ),
-      body: Container(
-        color: Color.fromRGBO(39, 39, 47, 1),
-        child:ListView.builder(
-          shrinkWrap: true,
-         itemBuilder: (c, i){
-                  return Card(
-            color:Colors.white,
-            margin: EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 8.0),
-            elevation: 4.0,
-            child: InkWell(
-                splashColor: Colors.grey.withAlpha(90),
-            onTap: () {
-              launch(title[i].url);
-            },
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-             mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Image(
-                    image: CachedNetworkImageProvider(
-                      title[i].myimage,
+    return WillPopScope(
+          onWillPop: (){
+       Navigator.of(context).pop(false);
+       
+      },
+          child: Scaffold(
+            
+        appBar: new AppBar(
+          backgroundColor: Color.fromRGBO(52, 52, 62, 1),
+          leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.white,),onPressed: (){
+                                    Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MyApp()),
+                              );
+                              
+                                  },),
+          title: Text("Resources"),
+          
+        ),
+        body: Container(
+          color: Color.fromRGBO(39, 39, 47, 1),
+          child:ListView.builder(
+            shrinkWrap: true,
+           itemBuilder: (c, i){
+                    return Card(
+              color:Colors.white,
+              margin: EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 8.0),
+              elevation: 4.0,
+              child: InkWell(
+                  splashColor: Colors.grey.withAlpha(90),
+              onTap: () {
+                launch(title[i].url);
+              },
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+               mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Image(
+                      image: CachedNetworkImageProvider(
+                        title[i].myimage,
+                      ),
+                      height: MediaQuery.of(context).size.height / 5,
+                      fit: BoxFit.cover,
+                  ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 16.0, bottom: 4.0),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      title[i].myheading,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.black),
                     ),
-                    height: MediaQuery.of(context).size.height / 5,
-                    fit: BoxFit.cover,
-                ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 16.0, right: 16.0, top: 16.0, bottom: 4.0),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    title[i].myheading,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.black),
                   ),
                 ),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                child: Text(
-                  title[i].mydescription,
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 16,
-                      color: Colors.black54),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                  child: Text(
+                    title[i].mydescription,
+                    style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.black54),
+                  ),
                 ),
+                ]
+              )
               ),
-              ]
-            )
-            ),
-          );
-         },
-         itemCount: title.length,
-        )
-        )
+            );
+           },
+           itemCount: title.length,
+          )
+          )
 
+      ),
     );
   }
 }

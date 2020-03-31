@@ -3,6 +3,7 @@ import 'package:dsc_chitkara/events.dart';
 import 'package:dsc_chitkara/resources.dart';
 import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 void main() => runApp(MyApp());
 
@@ -35,59 +36,79 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+
+Future<bool> _onWillPop(){
+  return showDialog(
+    context: context,
+    builder: (context) =>AlertDialog(
+      title:Text("Are you sure"),
+      content:Text("Do you want to Exit the App"),
+      actions:<Widget>[
+        FlatButton(onPressed: ()=> Navigator.of(context).pop(false), child: Text("No")),
+        FlatButton(onPressed: ()=> exit(0), child: Text("Yes")),
+
+      ]
+    )
+  )??
+  false;
+}
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
    double screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Color.fromRGBO(52, 52, 62, 1),
-        title: FlatButton.icon(
-          onPressed: (){},
-          icon:Image.asset("images/logo_trans.png",width: screenWidth * 0.1,
-              height: screenHeight * 0.042,),
-          label: Text("Developer Student Clubs",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white)),
-          ),
-          actions: <Widget>[
-            FlatButton(onPressed: (){}, child: Icon(Icons.info_outline,color:Colors.green,size:25))
-          ],
-      ),
-      body: Container(
-        color: Color.fromRGBO(39, 39, 47, 1),
-       child: ListView.builder(
-         shrinkWrap: true,
-         itemBuilder: (c, i){
-           return Card(
-                       color: Color.fromRGBO(52, 52, 62, 1),
-                       elevation: 8.0,
-                      margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                          leading: Container(
-                               
-                                child:title[i].myicon,// Icon(title[i].myicon, color: title[i].mycolor,size: 50,),
+    return WillPopScope(
+          onWillPop: _onWillPop,
+          child: Scaffold(
+        appBar: new AppBar(
+          backgroundColor: Color.fromRGBO(52, 52, 62, 1),
+          title: FlatButton.icon(
+            onPressed: (){},
+            icon:Image.asset("images/logo_trans.png",width: screenWidth * 0.1,
+                height: screenHeight * 0.042,),
+            label: Text("Developer Student Clubs",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white)),
+            ),
+            actions: <Widget>[
+              FlatButton(onPressed: (){}, child: Icon(Icons.info_outline,color:Colors.green,size:25))
+            ],
+        ),
+        body: Container(
+          color: Color.fromRGBO(39, 39, 47, 1),
+         child: ListView.builder(
+           shrinkWrap: true,
+           itemBuilder: (c, i){
+             return Card(
+                         color: Color.fromRGBO(52, 52, 62, 1),
+                         elevation: 8.0,
+                        margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
+                          child: ListTile(
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                            leading: Container(
+                                 
+                                  child:title[i].myicon,// Icon(title[i].myicon, color: title[i].mycolor,size: 50,),
 
+                                ),
+                                title: FlatButton(
+                                  onPressed: (){
+                                    Navigator.of(context).pushNamed(title[i].myroute);
+                                  },
+                                  padding: EdgeInsets.only(left: 0),
+                                child:Text(title[i].myheading,style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                
                               ),
-                              title: FlatButton(
-                                onPressed: (){
-                                  Navigator.of(context).pushNamed(title[i].myroute);
-                                },
-                                padding: EdgeInsets.only(left: 0),
-                              child:Text(title[i].myheading,style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
-                              
-                            ),
-                            subtitle: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Icon(Icons.linear_scale, color: title[i].mycolor),
-                                      Text(title[i].mydescription,style: TextStyle(color:title[i].mycolor),),
-                                    ],
-                                  ),
-                        ),
-                     );
-         },
-         itemCount: title.length,
-       )
+                              subtitle: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(Icons.linear_scale, color: title[i].mycolor),
+                                        Text(title[i].mydescription,style: TextStyle(color:title[i].mycolor),),
+                                      ],
+                                    ),
+                          ),
+                       );
+           },
+           itemCount: title.length,
+         )
+        ),
       ),
     );
   }
