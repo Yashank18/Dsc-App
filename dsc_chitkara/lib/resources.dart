@@ -15,7 +15,7 @@ class _resourcesState extends State<resources> {
   Widget build(BuildContext context) {
     return WillPopScope(
           onWillPop: (){
-       Navigator.of(context).pop(false);
+       Navigator.of(context).pop();
        
       },
           child: Scaffold(
@@ -23,11 +23,8 @@ class _resourcesState extends State<resources> {
         appBar: new AppBar(
           backgroundColor: Color.fromRGBO(52, 52, 62, 1),
           leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.white,),onPressed: (){
-                                    Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => MyApp()),
-                              );
+                                    Navigator.of(context).pop();
+                                    
                               
                                   },),
           title: Text("Resources"),

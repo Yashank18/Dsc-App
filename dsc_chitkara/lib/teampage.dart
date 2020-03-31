@@ -64,17 +64,14 @@ class _teampageState extends State<teampage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: (){
-       Navigator.of(context).maybePop('/home');
+       Navigator.of(context).pop();
       },
           child: Scaffold(
         appBar: new AppBar(
           leading: new FlatButton(
             child: Icon(Icons.arrow_back_ios,color: Colors.white),
             onPressed: (){
-               Navigator.push(
-                context,
-                 MaterialPageRoute(builder: (context) => MyApp()),
-              );
+               Navigator.of(context).pop();
             },
           ),
           title: new Text('Team'),
