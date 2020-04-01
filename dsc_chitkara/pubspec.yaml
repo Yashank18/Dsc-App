@@ -57,9 +57,6 @@ flutter:
   assets:
    - images/stars.jpg
    - images/dsc.png
-   - images/B1.jpg
-   - images/B2.jpg
-   - images/B3.jpg
    - images/userp.png
    - images/jan.png
    - images/dsc_trans.png

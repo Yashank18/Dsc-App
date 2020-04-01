@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import '../model/slide.dart';
 
 class SlideItem extends StatelessWidget {
@@ -18,9 +18,9 @@ class SlideItem extends StatelessWidget {
           width: screenWidth,
           height: screenHeight*0.35,
           decoration: BoxDecoration(
-            border: Border.all(width: 3.0,color:Colors.red),
+            
             image: DecorationImage(
-              image: AssetImage(slideList[index].imageUrl),
+              image:CachedNetworkImageProvider(slideList[index].imageUrl),
               fit: BoxFit.cover,
             ),
           ),

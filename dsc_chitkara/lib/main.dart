@@ -73,6 +73,7 @@ Future<bool> _onWillPop(){
             ],
         ),
         body: Container(
+          height:screenHeight,
           color: Color.fromRGBO(39, 39, 47, 1),
          child: ListView.builder(
            shrinkWrap: true,
