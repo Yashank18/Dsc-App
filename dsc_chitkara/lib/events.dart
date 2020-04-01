@@ -24,7 +24,7 @@ int _currentPage = 0;
   void initState() {
     super.initState();
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < 2) {
+      if (_currentPage < 7) {
         _currentPage++;
       } else {
         _currentPage = 0;
@@ -96,18 +96,18 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => registerPage()),
+                                  builder: (context) => PastEvent(id: 7,title:"WORKSHOP ON GSOC" ,)),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Text("Event 1 Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                child:Text("WORKSHOP ON GSOC",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.green),
-                                        Text("   Date",style: TextStyle(color:Colors.green),),
+                                        Text("7TH FEBRUARY 2020",style: TextStyle(color:Colors.green),),
                                       ],
                                     ),
                           ),
@@ -129,18 +129,18 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => MyApp()),
+                                  builder: (context) => PastEvent(id: 6,title:"GITHUB WORKSHOP" ,)),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Text("Event name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                child:Text("GITHUB WORKSHOP",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.red),
-                                        Text("   Date",style: TextStyle(color:Colors.red),),
+                                        Text("22ND JANUARY 2020",style: TextStyle(color:Colors.red),),
                                       ],
                                     ),
                           ),
@@ -161,18 +161,18 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => registerPage()),
+                                  builder: (context) => PastEvent(id: 5,title:"TALK ON WEB TECHNOLOGIES" ,)),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                child:Text("TALK ON WEB ",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.blue.shade700),
-                                        Text("   Date",style: TextStyle(color:Colors.blue.shade700),),
+                                        Text("5th NOVEMBER 2019",style: TextStyle(color:Colors.blue.shade700),),
                                       ],
                                     ),
                           ),
@@ -193,18 +193,18 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PastEvent(id: 1,title: "Event Name ii",)),
+                                  builder: (context) => PastEvent(id: 4,title:"OCTAHACKS 2.0" ),),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Hero(tag:'mytag',child: Text("Event Name ii",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold))),
+                                child:Hero(tag:'mytag',child: Text("OCTAHACKS 2.0",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold))),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.green),
-                                        Text("   Date",style: TextStyle(color:Colors.green),),
+                                        Text("20 & 21 September 2019",style: TextStyle(color:Colors.green),),
                                       ],
                                     ),
                           ),
@@ -226,18 +226,18 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => registerPage()),
+                                  builder: (context) => PastEvent(id: 3,title:"GOOGLE I/O EXTENDED 2019" ),),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Text("Event name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                child:Text("I/O EXTENDED 2019",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.red),
-                                        Text("   Date",style: TextStyle(color:Colors.red),),
+                                        Text("23RD AUGUST 2019",style: TextStyle(color:Colors.red),),
                                       ],
                                     ),
                           ),
@@ -258,18 +258,82 @@ int _currentPage = 0;
                                     Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => registerPage()),
+                                  builder: (context) => PastEvent(id: 2,title:"CODE CHAMP, S4" ),),
                               );
                                   },
                                   padding: EdgeInsets.only(left: 0),
-                                child:Text("Event Name",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                child:Text("CODE CHAMP, S4",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
                                 
                               ),
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Icon(Icons.linear_scale, color: Colors.blue.shade700),
-                                        Text("   Date",style: TextStyle(color:Colors.blue.shade700),),
+                                        Text("9TH AUGUST 2019",style: TextStyle(color:Colors.blue.shade700),),
+                                      ],
+                                    ),
+                          ),
+                       ),
+                       Card(
+                        color: Color.fromRGBO(52, 52, 62, 1),
+                         elevation: 8.0,
+                        margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
+                          child: ListTile(
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                            leading: Container(
+                                  
+                                  child: Icon(Icons.event, color: Colors.blue.shade700,size: 50,),
+
+                                ),
+                                title: FlatButton(
+                                  onPressed: (){
+                                    Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PastEvent(id: 1,title:"GSoC By Maandeep" ),),
+                              );
+                                  },
+                                  padding: EdgeInsets.only(left: 0),
+                                child:Text("GSoC By Maandeep",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                
+                              ),
+                              subtitle: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(Icons.linear_scale, color: Colors.green),
+                                        Text("26TH JULY 2019",style: TextStyle(color:Colors.green),),
+                                      ],
+                                    ),
+                          ),
+                       ),
+                       Card(
+                        color: Color.fromRGBO(52, 52, 62, 1),
+                         elevation: 8.0,
+                        margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
+                          child: ListTile(
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                            leading: Container(
+                                  
+                                  child: Icon(Icons.event, color: Colors.blue.shade700,size: 50,),
+
+                                ),
+                                title: FlatButton(
+                                  onPressed: (){
+                                    Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PastEvent(id: 0,title:"KOTLIN EVERYWHERE" ),),
+                              );
+                                  },
+                                  padding: EdgeInsets.only(left: 0),
+                                child:Text("KOTLIN EVERYWHERE",style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
+                                
+                              ),
+                              subtitle: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(Icons.linear_scale, color: Colors.red),
+                                        Text("19TH JULY 2019",style: TextStyle(color:Colors.red),),
                                       ],
                                     ),
                           ),

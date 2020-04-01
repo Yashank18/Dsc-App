@@ -91,65 +91,65 @@ List<Titles> title=[
   Titles(
     
     mydescription: "KOTLIN EVERYWHERE on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. ",
-    myheading: "Google Codelabs",
-     url:"https://codelabs.developers.google.com",
-    myimage: 'https://codelabs.developers.google.com/images/og-image.png',
+    myheading: "KOTLIN EVERYWHERE",
+     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg',
 
   ),
   Titles(
     
-    mydescription: "“KOTLIN EVERYWHERE” on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. ",
-    myheading: "Firebase",
-    url:"https://firebase.google.com/",
-   myimage: 'https://www.8bitmen.com/wp-content/uploads/2018/11/Firebase.png',
+    mydescription: "A talk on “Google Summer of Code (GSoC)” with Maandeep Singh. GSoC is a global program focused on bringing more student developers into open source software development. During this session, Maandeep Singh, who is a part of GSoC 2019, shared his experience with the students, guiding and motivating them to be a part of the upcoming GSoC competitive program. ",
+    myheading: "GSOC Workshop",
+    url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
+   myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg',
 
   ),
   Titles(
     
-    mydescription: "Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
-    myheading: "Flutter",
-     url:"http://flutter.io/",
-    myimage: 'https://blog.codemagic.io/uploads/CM_Android-dev-Flutter.png',
+    mydescription: "NINJAS! CODING NINJAS along with Developer Student Clubs, Chitkara University, hosted an online coding competition CODE CHAMP, Season 4, on 9th August 2019. More than 200 students participated in this competition. We gladly announce our winners, who won goodies from Coding Ninjas",
+    myheading: "CODE CHAMP, S4 ",
+     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg',
 
   ),
   Titles(
     
-    mydescription: "Google Cloud Platform, offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail and YouTube. ",
-    myheading: "Google Cloud Platform",
-     url:"http://cloud.google.com",
-    myimage: 'https://i.pcmag.com/imagery/reviews/02yVL9f8Jw1atwoG6sgFZDH-7.fit_scale.size_1028x578.v_1569482492.jpg',
+    mydescription: "Google I/O Extended 2019, another event organised by Developer Student Clubs, was successfully conducted on 23 August, 2019. It was a morning filled with tech talks featuring an eminent speaker, Mr. Kamal Vaid, Technology lead at Infosys, Chandigarh. Kamal Vaid sir is lead at GDG, Chandigarh and GDE for Google Assistant. The speaker gave the students a look at Google's latest developer products.",
+    myheading: "GOOGLE I/O EXTENDED 2019",
+     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg',
 
   ),
   Titles(
      
-    mydescription: "Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten jobs at tech companies including: Apple, Google, Amazon, Spotify",
-    myheading: "FreeCodeCamp",
-    url:"http://freecodecamp.org",
-    myimage: 'https://camo.githubusercontent.com/60c67cf9ac2db30d478d21755289c423e1f985c6/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f66726565636f646563616d702f776964652d736f6369616c2d62616e6e65722e706e67',
+    mydescription: "Chitkara University was transformed into an adrenaline-fuelled zone for 30 hours, as over 250 students from various universities participated in hackathon challenge - Octahacks 2.0, organised by Developer Student Clubs. OctaHacks is the annual flagship event of DSC where students get a unique opportunity to merge their creative ideas with their technical skills to build something exemplary. It's a place where all ideas get acknowledged.",
+    myheading: "OCTAHACKS 2.0",
+    url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg',
 
   ),
    Titles(
     
-    mydescription: "Google Assistant extends to help you across devices, like Google Home, your phone, and more. You can access it with long press home on Android, Ok Google, or a squeeze on Pixel phones.",
-    myheading: "Google Assistant",
-     url:"https://assistant.google.com/",
-    myimage: 'https://i.ytimg.com/vi/K_LESuPJVpU/maxresdefault.jpg',
+    mydescription: "Mr. Saurabh Thakur, Software Developer at smallcase and our DSC lead, addressed the audience regarding the technology use cases in a company. He shared his experience in the industry and shared information regarding various technologies which are being used in industries nowadays.",
+    myheading: "TALK ON WEB TECHNOLOGIES",
+     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Web_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg',
 
   ),
   Titles(
    
-    mydescription: "Udacity is the world’s fastest, most efficient way to master the skills tech companies want. 100% online, part-time & self-paced.",
-    myheading: "Udacity",
-    url:"https://www.udacity.com/",
-    myimage: 'https://www.bertelsmann.com/media/news-und-media/logos/logo-udacity-1600x900px_article_landscape_gt_1200_grid.png',
+    mydescription: "Developer Students Club (DSC), Department of Computer Science and Engineering, conducted the “Git and GitHub Workshop” on 22nd January 2020. Students participated in the event with huge zeal and enthusiasm. Over 150+ students turned out and made this a successful event. Hands on training session allows students to make the transition from the “why” behind a task to the “how”. Session proved to be really fruitful for the participants and now they are ready to commit to an Open Source Project.",
+    myheading: "GITHUB WORKSHOP",
+    url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg',
 
   ),
   Titles(
     
-    mydescription: "THE WORLD'S LARGEST WEB DEVELOPER SITE",
-    myheading: "W3 Schools",
-    url:"https://www.w3schools.com/",
-    myimage: 'https://external-preview.redd.it/_p2dL2RabR7Jo16efFao3TGJNJgYcI7Se4SDNKWbEq4.png?auto=webp&s=e9d5e7e74268a829636144351db03ae3f9fefe25',
+    mydescription: "Mr. Saurabh Thakur, Software Developer at smallcase and our DSC Lead who completed his GSoC journey with AOSSIE organisation in 2019, shared his GSoC experience, and his views on contacting the mentors, working on issues, being active on the IRC channels. Saurabh Thakur laid emphasis on first understanding the codebase and documentation of the project for working on issues and new features.",
+    myheading: "WORKSHOP ON GSOC",
+    url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
+    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg',
 
   ),
   

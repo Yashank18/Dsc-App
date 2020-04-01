@@ -361,7 +361,7 @@ List<Speaker> speakers = [
   Speaker(
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/PicsArt_03-29-04.36.37jpg",
-       speakerName: "Aaditya",
+       speakerName: "Aditya",
     speakerDesc: "DSC Co-ordinator",
     speakerWork: "Graphic Designer",
     fbUrl: "https://www.facebook.com/",
