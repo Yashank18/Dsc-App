@@ -86,7 +86,10 @@ Future<bool> _onWillPop(){
                       width: screenWidth*0.35,
                        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.red.shade100,),
                       child: FlatButton(
-                          onPressed: (){},
+                          onPressed: (){
+                             Navigator.pushNamed(
+                               context, '/screen1');
+                          },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -161,83 +164,5 @@ Future<bool> _onWillPop(){
     );
   }
 }
-
-
-class Titles {
-  Color mycolor;
-  String myheading;
-  String mydescription;
-  Icon myicon;
-  String myroute;
-
-  Titles(
-    {
-      this.mycolor,
-      this.myheading,
-      this.mydescription,
-      this.myicon,
-      this.myroute
-    }
-  );
-  Titles.fromJson(Map<String, dynamic> json) {
-    mycolor = json['mycolor'];
-    myheading = json['myheading'];
-    mydescription = json['mydescription'];
-    myicon = json['myicon'];
-    myroute = json['myicon'];
-  }
-Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['mycolor']=this.mycolor;
-    data['myheading']=this.myheading;
-    data['mydescription']=this.mydescription;
-    data['myicon']=this.myicon;
-    data['myroute']=this.myroute;
-    return data;
-  }
-}
-
-List<Titles> title=[
-  Titles(
-    mycolor: Colors.green,
-    mydescription: "  April-August 2020",
-    myheading: "Upcoming Events",
-    myicon: Icon(Icons.event,color: Colors.green,size:50),
-    myroute: '/screen1',
-
-  ),
-  Titles(
-     mycolor: Colors.red,
-    mydescription: "  2019-2020",
-    myheading: "Past Events",
-    myicon: Icon(Icons.event,color: Colors.red,size:50),
-    myroute: '/screen1',
-
-  ),
-  Titles(
-     mycolor: Colors.blue,
-    mydescription: "  To learn",
-    myheading: "Resources",
-     myicon: Icon(Icons.event,color: Colors.blue,size:50),
-    myroute: '/screen4',
-
-  ),
-  Titles(
-     mycolor: Colors.green,
-    mydescription: "  2020-2021",
-    myheading: "Our Team",
-     myicon: Icon(Icons.group_work,color: Colors.green,size:50),
-    myroute: '/screen3',
-
-  ),
-  Titles(
-    mycolor: Colors.red,
-    mydescription: "  Our Story",
-    myheading: "About Us",
-    myicon: Icon(Icons.info_outline,color: Colors.red,size:50),
-   myroute: '/screen2',
-
-  ),
-];
 
 

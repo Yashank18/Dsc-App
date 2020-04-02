@@ -5,6 +5,7 @@ import 'package:dsc_chitkara/pastEventDetail.dart';
 import 'package:dsc_chitkara/register.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'Widgets/slide_item.dart';
 import 'model/slide.dart';
 import 'Widgets/slide_dots.dart';
@@ -24,7 +25,7 @@ int _currentPage = 0;
   void initState() {
     super.initState();
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < 7) {
+      if (_currentPage < 4) {
         _currentPage++;
       } else {
         _currentPage = 0;
@@ -52,26 +53,26 @@ int _currentPage = 0;
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth= MediaQuery.of(context).size.width;
     return WillPopScope(
         onWillPop: (){
        Navigator.of(context).pop();
       },
           child: Scaffold(
         appBar: new AppBar(
-          backgroundColor: Color.fromRGBO(52, 52, 62, 1),
-          leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.white,),onPressed: (){
+          backgroundColor: Colors.white,
+          leading: FlatButton(child: Icon(Icons.arrow_back_ios,),onPressed: (){
                                     Navigator.of(context).pop();
                                   },),
-          title: Text("Events"),
+          title: Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.bold),)),
           
         ),
         body: Container(
-          color: Color.fromRGBO(39, 39, 47, 1),
-          child: 
-              
-                      ListView(
+          height: screenHeight,
+          color: Colors.white,
+          child: ListView(
                         children: <Widget>[
-                          Container( height: screenHeight*0.35,
+                          Container( height: screenHeight*0.37,
               child: PageView.builder(
                         scrollDirection: Axis.horizontal,
                         controller: _pageController,
@@ -79,8 +80,63 @@ int _currentPage = 0;
                         itemCount: slideList.length,
                         itemBuilder: (ctx, i) => SlideItem(i),
                       ),),
-                            SizedBox(height:20),
-                Card(
+                            SizedBox(height:screenHeight*0.1),
+                            Column(
+                              children: <Widget>[
+                               Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: screenHeight*0.14,
+                      width: screenWidth*0.95,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.red.shade100,),
+                      child: FlatButton(
+                          onPressed: (){
+                             Navigator.pushNamed(
+                               context, '/screen1');
+                          },
+                          child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.event_available,size: 55,color: Colors.red),
+                            Text("  Previous Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600)),textAlign: TextAlign.center),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height:screenHeight*0.03),
+                    Container(
+                      height: screenHeight*0.14,
+                      width: screenWidth*0.95,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.green.shade100,),
+                      child: FlatButton(
+                          onPressed: (){},
+                          child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.event,size: 55,color: Colors.green),
+                            Text("  Upcoming Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),),textAlign: TextAlign.center,)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                              ],
+                            )
+                
+                        ],
+                      )
+        ),
+      ),
+    );
+  }
+}
+
+/*
+Card(
                   
                          color: Color.fromRGBO(52, 52, 62, 1),
                          elevation: 8.0,
@@ -338,17 +394,4 @@ int _currentPage = 0;
                                       ],
                                     ),
                           ),
-                       ),
-                        ],
-                      )
-            
-          
-                
-                /**/
-              
-          
-        ),
-      ),
-    );
-  }
-}
+                       ),*/

@@ -15,10 +15,11 @@ class SlideItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
+          margin: EdgeInsets.only(top: screenHeight*0.01),
           width: screenWidth,
           height: screenHeight*0.35,
           decoration: BoxDecoration(
-            
+            border: Border.all(color: Colors.black54,width: 2),
             image: DecorationImage(
               image:CachedNetworkImageProvider(slideList[index].imageUrl),
               fit: BoxFit.cover,
