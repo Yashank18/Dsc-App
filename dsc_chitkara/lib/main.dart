@@ -4,6 +4,7 @@ import 'package:dsc_chitkara/resources.dart';
 import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -59,58 +60,104 @@ Future<bool> _onWillPop(){
    double screenWidth = MediaQuery.of(context).size.width;
     return WillPopScope(
           onWillPop: _onWillPop,
-          child: Scaffold(
-        appBar: new AppBar(
-          backgroundColor: Color.fromRGBO(52, 52, 62, 1),
-          title: FlatButton.icon(
-            onPressed: (){},
-            icon:Image.asset("images/logo_trans.png",width: screenWidth * 0.1,
-                height: screenHeight * 0.042,),
-            label: Text("Developer Student Clubs",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white)),
+          child: SafeArea(
+             child: Scaffold(
+             body: SingleChildScrollView(
+             physics: BouncingScrollPhysics(),
+             child: Column(
+               
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: screenHeight*0.11,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Welcome to",style:GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 45,fontWeight: FontWeight.w900,color: Colors.grey.shade700,)))
+                  ],
+                ),
+                Padding(padding: EdgeInsets.symmetric(horizontal: 15,vertical: 30),child: Image.asset("images/dsc.png",width: screenWidth*0.9,),),
+                SizedBox(height: screenHeight*0.1,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(
+                      height: screenHeight*0.16,
+                      width: screenWidth*0.35,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.red.shade100,),
+                      child: FlatButton(
+                          onPressed: (){},
+                          child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.event_available,size: 55,color: Colors.red),
+                            Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: screenHeight*0.16,
+                      width: screenWidth*0.35,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.green.shade100,),
+                      child: FlatButton(
+                          onPressed: (){},
+                          child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.info,size: 55,color: Colors.green),
+                            Text("About Us",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: screenHeight*0.04,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(
+                      height: screenHeight*0.16,
+                      width: screenWidth*0.35,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.blue.shade100,),
+                      child: FlatButton(
+                          onPressed: (){},
+                          child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.group,size: 55,color: Colors.blue),
+                            Text("Team",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: screenHeight*0.16,
+                      width: screenWidth*0.35,
+                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.yellow.shade100,),
+                      child: FlatButton(
+                          onPressed: (){},
+                          child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.local_library,size: 55,color: Colors.yellow.shade700),
+                            Text("Resources",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: screenHeight*0.055,),
+                Text("Version 1.0.0"),
+               
+                
+              ],
             ),
-            actions: <Widget>[
-              FlatButton(onPressed: (){}, child: Icon(Icons.info_outline,color:Colors.green,size:25))
-            ],
-        ),
-        body: Container(
-          height:screenHeight,
-          color: Color.fromRGBO(39, 39, 47, 1),
-         child: ListView.builder(
-           shrinkWrap: true,
-           itemBuilder: (c, i){
-             return Card(
-                         color: Color.fromRGBO(52, 52, 62, 1),
-                         elevation: 8.0,
-                        margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
-                          child: ListTile(
-                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                            leading: Container(
-                                 
-                                  child:title[i].myicon,// Icon(title[i].myicon, color: title[i].mycolor,size: 50,),
-
-                                ),
-                                title: FlatButton(
-                                  onPressed: (){
-                                    Navigator.of(context).pushNamed(title[i].myroute);
-                                  },
-                                  padding: EdgeInsets.only(left: 0),
-                                child:Text(title[i].myheading,style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.bold)),
-                                
-                              ),
-                              subtitle: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Icon(Icons.linear_scale, color: title[i].mycolor),
-                                        Text(title[i].mydescription,style: TextStyle(color:title[i].mycolor),),
-                                      ],
-                                    ),
-                          ),
-                       );
-           },
-           itemCount: title.length,
-         )
-        ),
+        )
       ),
+          ),
     );
   }
 }

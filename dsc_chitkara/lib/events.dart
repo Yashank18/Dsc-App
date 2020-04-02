@@ -81,6 +81,7 @@ int _currentPage = 0;
                       ),),
                             SizedBox(height:20),
                 Card(
+                  
                          color: Color.fromRGBO(52, 52, 62, 1),
                          elevation: 8.0,
                         margin: EdgeInsets.symmetric(horizontal:10.0,vertical:6.0),
