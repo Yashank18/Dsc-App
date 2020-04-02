@@ -87,30 +87,39 @@ class _HomeEventsState extends State<HomeEvents> {
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
            itemBuilder: (c, i){
-             return Card(
-                   margin: EdgeInsets.only(left: 7),
-                   elevation: 5.0,
-                   
-                   
-                   child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: <Widget>[
-                       Container(
-                         decoration: new BoxDecoration(
+             return InkWell(
+               onTap: (){
+                 Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PastEvent(id: title[i].id,title:title[i].myheading ,)),
+                              );
+               },
+                            child: Card(
+                     margin: EdgeInsets.only(left: 7),
+                     elevation: 5.0,
+                     
+                     
+                     child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: <Widget>[
+                         Container(
+                           decoration: new BoxDecoration(
+                             
+                             image:DecorationImage(fit: BoxFit.cover,image: CachedNetworkImageProvider(title[i].myimage))
                            
-                           image:DecorationImage(fit: BoxFit.cover,image: CachedNetworkImageProvider(title[i].myimage))
-                         
+                           ),
+                           width: screenWidth*0.9,
+                           height: screenHeight*0.27,
+                           
                          ),
-                         width: screenWidth*0.9,
-                         height: screenHeight*0.27,
-                         
-                       ),
-                       SizedBox(height: screenHeight*0.006,),
-                       Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(title[i].myheading,style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                       Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(title[i].mydescription,style:GoogleFonts.varelaRound()))
-                     ],
+                         SizedBox(height: screenHeight*0.006,),
+                         Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(title[i].myheading,style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
+                         Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(title[i].mydescription,style:GoogleFonts.varelaRound()))
+                       ],
+                     ),
                    ),
-                 );
+             );
            },
            itemCount: title.length,
               )
@@ -168,7 +177,7 @@ List<Titles> title=[
     myheading: "WORKSHOP ON GSOC",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg',
-    id:0,
+    id:7,
 
   ),
   Titles(
@@ -177,7 +186,7 @@ List<Titles> title=[
     myheading: "GITHUB WORKSHOP",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg',
-    id:1
+    id:6
 
   ),
   Titles(
@@ -186,7 +195,7 @@ List<Titles> title=[
     myheading: "TALK ON WEB TECHNOLOGIES",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Web_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg',
-    id:2
+    id:5
 
   ),
   Titles(
@@ -195,7 +204,7 @@ List<Titles> title=[
     myheading: "OCTAHACKS 2.0",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg',
-    id:3
+    id:4
 
   ),
   
@@ -205,7 +214,7 @@ List<Titles> title=[
     myheading: "GOOGLE I/O EXTENDED 2019",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg',
-    id:4
+    id:3
 
   ),
   Titles(
@@ -214,7 +223,7 @@ List<Titles> title=[
     myheading: "CODE CHAMP, S4 ",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg',
-    id:5
+    id:2
   ),
   
   Titles(
@@ -223,7 +232,7 @@ List<Titles> title=[
     myheading: "GSOC Workshop",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg',
-  id:6
+  id:1
   ),
   
   
@@ -233,7 +242,7 @@ List<Titles> title=[
     myheading: "KOTLIN EVERYWHERE",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg',
-id:7
+id:0
   ),
   
 ];

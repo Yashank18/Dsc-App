@@ -91,7 +91,7 @@ Future<bool> _onWillPop(){
                       child: FlatButton(
                           onPressed: (){
                              Navigator.pushNamed(
-                               context, '/screen6');
+                               context, '/screen1');
                           },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -109,7 +109,7 @@ Future<bool> _onWillPop(){
                       child: FlatButton(
                           onPressed: (){
                             Navigator.pushNamed(
-                               context, '/screen5');
+                               context, '/screen2');
                           },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -131,7 +131,10 @@ Future<bool> _onWillPop(){
                       width: screenWidth*0.35,
                        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.blue.shade100,),
                       child: FlatButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushNamed(
+                               context, '/screen3');
+                          },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -146,7 +149,10 @@ Future<bool> _onWillPop(){
                       width: screenWidth*0.35,
                        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.yellow.shade100,),
                       child: FlatButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushNamed(
+                               context, '/screen4');
+                          },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[

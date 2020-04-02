@@ -1,6 +1,7 @@
 import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -51,7 +52,7 @@ class _teampageState extends State<teampage> {
               icon: Icon(
                 FontAwesomeIcons.github,
                 size: 15,
-                color:Colors.white
+                color:Colors.black,
               ),
               onPressed: () {
                 launch(speakers[0].githubUrl);
@@ -70,23 +71,23 @@ class _teampageState extends State<teampage> {
           child: Scaffold(
         appBar: new AppBar(
           leading: new FlatButton(
-            child: Icon(Icons.arrow_back_ios,color: Colors.white),
+            child: Icon(Icons.arrow_back_ios,color: Colors.black),
             onPressed: (){
                Navigator.of(context).pop();
             },
           ),
-          title: new Text('Team'),
-           backgroundColor: Color.fromRGBO(52, 52, 62, 1),
+          title: new Text('Team',style:GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
+           backgroundColor: Colors.white,
         ),
         body: Container(
-          color: Color.fromRGBO(39, 39, 47, 1),
+          color: Colors.white,
           child: ListView.builder(
             
             shrinkWrap: true,
             itemBuilder: (c, i) {
               return Card(
-                color: Color.fromRGBO(52, 52, 62, 1),
-                elevation: 0.0,
+                color: Colors.white,
+                elevation: 2.0,
                 child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Row(
@@ -119,7 +120,7 @@ class _teampageState extends State<teampage> {
                                 children: <Widget>[
                                   Text(
                                     speakers[i].speakerName,
-                                    style: TextStyle(color:Color.fromRGBO(55, 239, 187, 1),fontSize:25.0),
+                                    style: TextStyle(color:Colors.black,fontSize:25.0),
                                   ),
                                   SizedBox(
                                     height: 5,
@@ -137,7 +138,7 @@ class _teampageState extends State<teampage> {
                               ),
                               Text(
                                 speakers[i].speakerDesc,
-                                style: TextStyle(color:Colors.white,fontSize:17.0),
+                                style: TextStyle(color:Colors.grey,fontSize:17.0),
                               ),
                               SizedBox(
                                 height: 10,

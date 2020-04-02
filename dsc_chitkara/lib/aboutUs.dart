@@ -1,5 +1,6 @@
 import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AboutUs extends StatefulWidget {
   AboutUs({Key key}) : super(key: key);
@@ -13,35 +14,26 @@ class _AboutUsState extends State<AboutUs> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: new AppBar(
-        backgroundColor: Color.fromRGBO(52, 52, 62, 1),
-        leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.white,),onPressed: (){
-                                  Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MyApp()),
-                            );
+        backgroundColor: Colors.white,
+        leading: FlatButton(child: Icon(Icons.arrow_back_ios,color: Colors.black,),onPressed: (){
+                                  Navigator.pop(context);
+                            
                                 },),
-        title: Text("About Us"),
+        title: Text("About Us",style:GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
         
       ),
       body: Container(
-        color: Color.fromRGBO(39, 39, 47, 1),
+        color: Colors.white,
         child: ListView(
           padding: EdgeInsets.only(top:70,left:10,right:10),
           children: <Widget>[
             Image.asset("images/dsc.png"),
             SizedBox(height: 30,),
-            Center(child: Text("About Us",style: TextStyle(color: Color.fromRGBO(251, 219, 134, 1),fontSize: 40),)),
-            SizedBox(height:20),
-            AnimatedContainer(
-              duration: Duration(seconds: 1),
-              width: MediaQuery.of(context).size.width ,
-              height: 1,
-              color:Color.fromRGBO(55, 239, 187, 1),
-            ),
+             Text("What is DSC ?",style: GoogleFonts.varelaRound(textStyle:TextStyle(color: Colors.black,fontSize: 40,fontWeight: FontWeight.w800),) ),
+            
             SizedBox(height: 30,),
-            Text("Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a DSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community. Developer Student Clubs, Chitkara University Mainly focuses on Overall development of Society",textAlign: TextAlign.justify,style: TextStyle(color:Colors.white,fontSize:15),)
-          ],
+             Card(elevation: 0.0,child: Padding(padding:EdgeInsets.all(15),child: Text("Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a DSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community. Developer Student Clubs, Chitkara University Mainly focuses on Overall development of Society",style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),)
+          ]
         ),
       ),
     );
