@@ -1,3 +1,4 @@
+import 'package:dsc_chitkara/Event_home.dart';
 import 'package:dsc_chitkara/aboutUs.dart';
 import 'package:dsc_chitkara/events.dart';
 import 'package:dsc_chitkara/resources.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     '/screen2' : (BuildContext context) => AboutUs(),
     '/screen3' : (BuildContext context) => teampage(),
     '/screen4':  (BuildContext context) => resources(),
+    '/screen5':  (BuildContext context) => HomeEvents(),
     
   },
     );
@@ -104,7 +106,10 @@ Future<bool> _onWillPop(){
                       width: screenWidth*0.35,
                        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0)),color: Colors.green.shade100,),
                       child: FlatButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushNamed(
+                               context, '/screen5');
+                          },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
