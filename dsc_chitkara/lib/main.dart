@@ -1,6 +1,7 @@
 import 'package:dsc_chitkara/Event_home.dart';
 import 'package:dsc_chitkara/aboutUs.dart';
 import 'package:dsc_chitkara/events.dart';
+import 'package:dsc_chitkara/pastEventDetail.dart';
 import 'package:dsc_chitkara/resources.dart';
 import 'package:dsc_chitkara/teampage.dart';
 import 'package:flutter/material.dart';
@@ -20,11 +21,11 @@ class MyApp extends StatelessWidget {
       title: "Developer Student Clubs, Chitkara University",
       home: MyHome(),
       routes: <String, WidgetBuilder> {
-    '/screen1': (BuildContext context) => EventPage(),
+    '/screen1': (BuildContext context) => HomeEvents(),
     '/screen2' : (BuildContext context) => AboutUs(),
     '/screen3' : (BuildContext context) => teampage(),
     '/screen4':  (BuildContext context) => resources(),
-    '/screen5':  (BuildContext context) => HomeEvents(),
+    
     
   },
     );
@@ -90,7 +91,7 @@ Future<bool> _onWillPop(){
                       child: FlatButton(
                           onPressed: (){
                              Navigator.pushNamed(
-                               context, '/screen1');
+                               context, '/screen6');
                           },
                           child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

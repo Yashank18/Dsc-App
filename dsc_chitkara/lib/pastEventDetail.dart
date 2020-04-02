@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class PastEvent extends StatefulWidget {
@@ -19,37 +20,62 @@ class _PastEventState extends State<PastEvent> {
     return Scaffold(
       appBar: new AppBar(
           leading: new FlatButton(
-            child: Icon(Icons.arrow_back_ios,color: Colors.white),
+            child: Icon(Icons.arrow_back_ios,color: Colors.black),
             onPressed: (){
                Navigator.of(context).pop();
             },
           ),
-          title: new Text(widget.title),
-           backgroundColor: Color.fromRGBO(52, 52, 62, 1),
+          backgroundColor: Colors.white,
+          title: new Text("Events",style: GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
+           
         ),
         body: Container(
           height: screenHeight,
           width: screenWidth,
-          color: Color.fromRGBO(39, 39, 47, 1),
-          child: ListView(
-            children: <Widget>[
-               Card(
-                                child: Image(
-                        image: CachedNetworkImageProvider(
-                          title[widget.id].myimage,
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: screenHeight*0.03,),
+                Container(child:Text(title[widget.id].myheading,style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 25,fontWeight: FontWeight.w700)),)),
+                SizedBox(height: screenHeight*0.03,),
+                Container(
+                  child:Row(
+                    children: <Widget>[
+                      
+                      Container(
+                        height: screenHeight*0.32,
+                        width: screenWidth*0.45,
+                        child: Image(image:CachedNetworkImageProvider(title[widget.id].url),)
                         ),
-                        height: MediaQuery.of(context).size.height / 3.5,
-                        fit: BoxFit.cover,
-                    ),
+                        Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+
+                             Container(child:Text("Saturday, 11 Feb 2020",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 17,fontWeight: FontWeight.w800)),)),
+                             Container(child:Text("10:00 am onwards",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 12,fontWeight: FontWeight.w100)),)),
+                             SizedBox(height: screenHeight*0.06,),
+                             Container(child:Text("Venue",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 15,fontWeight: FontWeight.w800)),)),
+                             Container(child:Text("bdcilco")),
+                             SizedBox(height: screenHeight*0.06,),
+                             Container(child:Text("Link",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 15,fontWeight: FontWeight.w800)),)),
+                             Container(child:Text("bdcilco")),
+                            ],
+                          ),
+                        ),
+                        ],
                     
-               ),
-               SizedBox(height:screenHeight*0.03),
-               Center(child:Text(widget.title,style: TextStyle(fontSize: 40,color:Colors.white),)),
-               SizedBox(height:screenHeight*0.03),
-               Padding(padding:EdgeInsets.symmetric(horizontal:12),child: Center(child:Text(title[widget.id].mydescription,style: TextStyle(fontSize: 20,color:Colors.white),textAlign: TextAlign.justify,)))
-            ],
+                  )
+                ),
+                SizedBox(height: screenHeight*0.05,),
+                          Card(child: Padding(padding:EdgeInsets.all(20),child: Text(title[widget.id].mydescription,style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),)
+              ],
+            ),
           )
-        ),
+          
+        )
     );
   }
 }
@@ -59,6 +85,10 @@ class Titles {
   String mydescription;
   String url;
   String myimage;
+    String myLocation;
+  String myDate;
+  String myTime;
+  String myLink;
 
   Titles(
     {
@@ -66,7 +96,12 @@ class Titles {
       this.myheading,
       this.mydescription,
       this.url,
-      this.myimage
+      this.myimage,
+      this.myDate,
+      this.myLink,
+      this.myLocation,
+      this.myTime,
+
     }
   );
   Titles.fromJson(Map<String, dynamic> json) {
@@ -75,6 +110,10 @@ class Titles {
     mydescription = json['mydescription'];
     url=json['url'];
     myimage = json['myicon'];
+    myLink= json['myLink'];
+    myDate = json['myDate'];
+    myTime=json['myTime'];
+    myLocation = json['myLocation'];
   }
 Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
@@ -83,6 +122,10 @@ Map<String, dynamic> toJson() {
     data['mydescription']=this.mydescription;
     data['url']=this.url;
     data['myimage']=this.myimage;
+    data['myLink']=this.myLink;
+    data['myDate']=this.myDate;
+    data['myTime']=this.myTime;
+    data['myLocation']=this.myLocation;
     return data;
   }
 }
@@ -94,6 +137,11 @@ List<Titles> title=[
     myheading: "KOTLIN EVERYWHERE",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Pierre Hall',
+    myDate: 'Friday, July 19 2019',
+    myTime: '9:30 am ownwards'
+
 
   ),
   Titles(
@@ -102,6 +150,10 @@ List<Titles> title=[
     myheading: "GSOC Workshop",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
    myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg',
+   myLink: 'Registration Closed',
+    myLocation: 'Faraday Hall',
+    myDate: 'Friday, July 26 2019',
+    myTime: '9:30 am ownwards'
 
   ),
   Titles(
@@ -110,6 +162,10 @@ List<Titles> title=[
     myheading: "CODE CHAMP, S4 ",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Online',
+    myDate: 'Friday, August 9 2019',
+    myTime: '9:30 am ownwards'
 
   ),
   Titles(
@@ -118,6 +174,10 @@ List<Titles> title=[
     myheading: "GOOGLE I/O EXTENDED 2019",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Plato Hall',
+    myDate: 'Thursday, August 23 2019',
+    myTime: '9:30 am ownwards'
 
   ),
   Titles(
@@ -126,6 +186,10 @@ List<Titles> title=[
     myheading: "OCTAHACKS 2.0",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Various Halls',
+    myDate: 'Fri-Sat, September 20-21 2019',
+    myTime: '36 Hours'
 
   ),
    Titles(
@@ -134,6 +198,10 @@ List<Titles> title=[
     myheading: "TALK ON WEB TECHNOLOGIES",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Web_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Pulitzer Hall',
+    myDate: 'Tuesday, November 5 2019',
+    myTime: '9:30 am ownwards'
 
   ),
   Titles(
@@ -142,6 +210,10 @@ List<Titles> title=[
     myheading: "GITHUB WORKSHOP",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Mooc Hall',
+    myDate: 'Wednesday, January 2020',
+    myTime: '9:30 am ownwards'
 
   ),
   Titles(
@@ -150,6 +222,10 @@ List<Titles> title=[
     myheading: "WORKSHOP ON GSOC",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg',
+    myLink: 'Registration Closed',
+    myLocation: 'Mooc Hall',
+    myDate: 'Thursday, February 5 2020',
+    myTime: '9:30 am ownwards'
 
   ),
   
