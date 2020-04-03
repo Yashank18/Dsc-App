@@ -231,7 +231,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sourabh.jpg",
         speakerName: "Saurabh Thakur",
-    speakerDesc: "DSC Lead",
+    speakerDesc: "Lead",
     speakerWork: "SDE at SmallCase",
     fbUrl: "https://facebook.com/thakursaurabh1998",
     githubUrl: "https://github.com/thakursaurabh1998",
@@ -242,7 +242,7 @@ List<Speaker> speakers = [
     speakerImage:
        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/yashank.jpg",
        speakerName: "Yashank",
-    speakerDesc: "DSC Android Lead",
+    speakerDesc: "Android Lead",
     speakerWork: "Flutter Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/Yashank18",
@@ -253,7 +253,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/muskan.jpg",
        speakerName: "Muskan Goyal",
-    speakerDesc: "DSC Web Lead",
+    speakerDesc: "Web Lead",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/goyalmuskan",
@@ -264,7 +264,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/saransh.jpg",
        speakerName: "Saransh",
-    speakerDesc: "DSC Web Lead",
+    speakerDesc: "Web Lead",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/saranshdawra",
@@ -275,7 +275,7 @@ List<Speaker> speakers = [
     speakerImage:
        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/satvik.jpg",
        speakerName: "Satvik",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/satvikchachra",
@@ -286,7 +286,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/ishaan.jpg",
        speakerName: "Ishaan",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Public Relations",
     fbUrl: "https://www.facebook.com/",
     githubUrl: "https://github.com/ishaan2908",
@@ -297,7 +297,7 @@ List<Speaker> speakers = [
     speakerImage:
       "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sahil.jpg",
        speakerName: "Sahildeep",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/sForSaahil",
     githubUrl: "https://github.com/sahilcodes",
@@ -308,7 +308,7 @@ List<Speaker> speakers = [
     speakerImage:
       "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/ishan.jpg",
        speakerName: "Ishan Sharma",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/",
     githubUrl: "https://github.com/ishandeveloper",
@@ -319,7 +319,7 @@ List<Speaker> speakers = [
     speakerImage:
        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kushal.jpg",
        speakerName: "Kushal Bhanot",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Frontend Developer",
     fbUrl: "https://facebook.com/kushal.bhanot.98",
     githubUrl: "https://github.com/KushalBhanot",
@@ -330,7 +330,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/anmol.jpg",
        speakerName: "Anmol",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Flutter Developer",
     fbUrl: "https://www.facebook.com/anmol.dx.5",
     githubUrl: "https://github.com/AnmolSehgal",
@@ -341,7 +341,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/IMG_20200119_175759.jpg",
        speakerName: "Mridul Bhatia",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Video Editor",
     fbUrl: "https://www.facebook.com/mridul.bhatia.54",
     githubUrl: "https://github.com/mridulbhatia0007",
@@ -352,7 +352,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/simran.jpg",
        speakerName: "Simran",
-    speakerDesc: "DSC Member",
+    speakerDesc: "Member",
     speakerWork: "Flutter Developer",
     fbUrl: "https://www.facebook.com/",
     githubUrl: "https://github.com/simransrivastava01",
@@ -361,9 +361,9 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerImage:
-        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/PicsArt_03-29-04.36.37jpg",
+        "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/PicsArt_03-29-04.36.37.jpg",
        speakerName: "Aditya",
-    speakerDesc: "DSC Co-ordinator",
+    speakerDesc: "Co-ordinator",
     speakerWork: "Graphic Designer",
     fbUrl: "https://www.facebook.com/",
     githubUrl: "https://github.com/adityasingh7715",
@@ -374,7 +374,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/tanishq.jpg",
        speakerName: "Tanishq",
-    speakerDesc: "DSC Co-ordinator",
+    speakerDesc: "Co-ordinator",
     speakerWork: "Web ",
     fbUrl: "https://www.facebook.com/tanishq.singla.102",
     githubUrl: "https://github.com/TanishqSingla",
@@ -385,7 +385,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sahu.jpg",
        speakerName: "Saurabh Sahu",
-    speakerDesc: "DSC Co-ordinator",
+    speakerDesc: "Co-ordinator",
     speakerWork: "Web",
     fbUrl: "https://www.facebook.com/",
     githubUrl: "https://github.com/ssbeast",
@@ -396,7 +396,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/image0.jpeg",
        speakerName: "Anant",
-    speakerDesc: "Dsc Member",
+    speakerDesc: "Member",
     speakerWork: "Media Team",
     fbUrl: "https://www.facebook.com/",
     githubUrl: "https://github.com/",

@@ -26,15 +26,15 @@ class _HomeEventsState extends State<HomeEvents> {
           leading: FlatButton(child: Icon(Icons.arrow_back_ios,),onPressed: (){
                                     Navigator.of(context).pop();
                                   },),
-          title: Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(color:Colors.black,fontWeight: FontWeight.bold),)),
+          title: Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(color:Colors.black,),)),
           
         ),
         body: ListView(
           
           children: <Widget>[
-            SizedBox(height: screenHeight*0.03,),
+            SizedBox(height: screenHeight*0.06,),
              Padding(padding:EdgeInsets.only(left: 10),child: Text("Upcoming Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
-            SizedBox(height: screenHeight*0.03,),
+            SizedBox(height: screenHeight*0.06,),
             Container(
               height: screenHeight*0.4,
               child: ListView.builder(
@@ -51,7 +51,7 @@ class _HomeEventsState extends State<HomeEvents> {
                },
                             child: Card(
                      margin: EdgeInsets.only(left: 7),
-                     elevation: 5.0,
+                     elevation: 2.0,
                      
                      
                      child: Column(
@@ -78,9 +78,9 @@ class _HomeEventsState extends State<HomeEvents> {
            itemCount: title.length,
               )
             ),
-            SizedBox(height: screenHeight*0.02,),
+            SizedBox(height: screenHeight*0.05,),
              Padding(padding:EdgeInsets.only(left: 10),child: Text("Past Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
-            SizedBox(height: screenHeight*0.04,),
+            SizedBox(height: screenHeight*0.05,),
             Container(
               height: screenHeight*0.4,
               child: ListView.builder(
@@ -97,7 +97,7 @@ class _HomeEventsState extends State<HomeEvents> {
                },
                             child: Card(
                      margin: EdgeInsets.only(left: 7),
-                     elevation: 5.0,
+                     elevation: 2.0,
                      
                      
                      child: Column(
@@ -124,6 +124,7 @@ class _HomeEventsState extends State<HomeEvents> {
            itemCount: title.length,
               )
             ),
+            SizedBox(height: screenHeight*0.05,),
           ],
         ),
       )
@@ -182,7 +183,7 @@ List<Titles> title=[
   ),
   Titles(
    
-    mydescription: "Speaker - Mr.Yashank",
+    mydescription: "Speaker - Mr. Yashank",
     myheading: "GITHUB WORKSHOP",
     url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg',
@@ -210,7 +211,7 @@ List<Titles> title=[
   
   Titles(
     
-    mydescription: "Speaker - Mr.Kamal vaid",
+    mydescription: "Speaker - Mr. Kamal Vaid",
     myheading: "GOOGLE I/O EXTENDED 2019",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg',
@@ -220,7 +221,7 @@ List<Titles> title=[
   Titles(
     
     mydescription: "Organiser- Chitkara university",
-    myheading: "CODE CHAMP, S4 ",
+    myheading: "CODE CHAMP,S4 ",
      url:"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
     myimage: 'https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg',
     id:2

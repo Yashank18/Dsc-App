@@ -97,7 +97,7 @@ Future<bool> _onWillPop(){
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.event_available,size: 55,color: Colors.red),
-                            Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                            Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: screenHeight*0.024,fontWeight: FontWeight.w600),))
                           ],
                         ),
                       ),
@@ -115,7 +115,7 @@ Future<bool> _onWillPop(){
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.info,size: 55,color: Colors.green),
-                            Text("About Us",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                            Text("About Us",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: screenHeight*0.024,fontWeight: FontWeight.w600),))
                           ],
                         ),
                       ),
@@ -139,7 +139,7 @@ Future<bool> _onWillPop(){
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.group,size: 55,color: Colors.blue),
-                            Text("Team",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                            Text("Team",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: screenHeight*0.024,fontWeight: FontWeight.w600),))
                           ],
                         ),
                       ),
@@ -157,14 +157,14 @@ Future<bool> _onWillPop(){
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.local_library,size: 55,color: Colors.yellow.shade700),
-                            Text("Resources",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),))
+                            Text("Resources",style: GoogleFonts.varelaRound(textStyle: TextStyle(fontSize: screenHeight*0.024,fontWeight: FontWeight.w600),))
                           ],
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: screenHeight*0.055,),
+                SizedBox(height: screenHeight*0.11,),
                 Text("Version 1.0.0"),
                
                 

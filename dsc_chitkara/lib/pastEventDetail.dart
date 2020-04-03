@@ -140,7 +140,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Pierre Hall',
     myDate: 'Friday, July 19 2019',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
 
   ),
@@ -153,7 +153,7 @@ List<Titles> title=[
    myLink: 'Registration Closed',
     myLocation: 'Faraday Hall',
     myDate: 'Friday, July 26 2019',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   Titles(
@@ -165,7 +165,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Online',
     myDate: 'Friday, August 9 2019',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   Titles(
@@ -177,7 +177,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Plato Hall',
     myDate: 'Thursday, August 23 2019',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   Titles(
@@ -201,7 +201,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Pulitzer Hall',
     myDate: 'Tuesday, November 5 2019',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   Titles(
@@ -213,7 +213,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Mooc Hall',
     myDate: 'Wednesday, January 2020',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   Titles(
@@ -225,7 +225,7 @@ List<Titles> title=[
     myLink: 'Registration Closed',
     myLocation: 'Mooc Hall',
     myDate: 'Thursday, February 5 2020',
-    myTime: '9:30 am ownwards'
+    myTime: '9:30 am onwards'
 
   ),
   
