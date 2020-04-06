@@ -6,6 +6,10 @@
 		 "description":"Speaker - Mr. Saurabh Thakur",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
 		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg",	
+		 "myLink": "Registration Closed",
+   		 "myLocation": "Mooc Hall",
+    		 "myDate": "Thursday, February 5 2020",
+    		 "myTime": "9:30 am onwards"
 
 		}
 		{
@@ -13,7 +17,11 @@
 		 "heading": "GITHUB WORKSHOP",
 		 "description":"Speaker - Mr. Yashank",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",
+		 "myLink": "Registration Closed",
+   		 "myLocation": "Mooc Hall",
+    		 "myDate": "Wednesday, January 22 2020",
+    		 "myTime": "9:30 am onwards"
 
 		}
 		{
@@ -21,7 +29,11 @@
 		 "heading": "TALK ON WEB TECHNOLOGIES",
 		 "description":"Speaker - Mr. Saurabh Thakur",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Pulitzer Hall",
+    		 "myDate": "Tuesday, November 5 2019",
+    		 "myTime": "9:30 am onwards"
 
 		}
 		{
@@ -29,7 +41,11 @@
 		 "heading": "OCTAHACKS 2.0",
 		 "description":"Oraganizer - Chitkara University",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Various Hall",
+    		 "myDate": "Fri-Sat, September 20-21 2019",
+    		 "myTime": "36 Hours"
 
 		}
 		{
@@ -37,7 +53,12 @@
 		 "heading": "GOOGLE I/O EXTENDED 2019",
 		 "description":"Speaker - Mr. Kamal Vaid",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Plato Hall",
+    		 "myDate": "Thursday, August 23 2019",
+    		 "myTime": "9:30 am onwards"
+
 
 		}
 		{
@@ -45,7 +66,11 @@
 		 "heading": "CODE CHAMP,S4 ",
 		 "description":"Organiser- Chitkara university",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Online",
+    		 "myDate": "Friday, August 9 2019",
+    		 "myTime": "9:30 am onwards"
 
 		}
 		{
@@ -53,7 +78,11 @@
 		 "heading": "GSOC Workshop",
 		 "description":"Speaker - Mr. Maandeep Singh",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Faraday Hall",
+    		 "myDate": "Friday, July 26 2019",
+    		 "myTime": "9:30 am onwards"
 
 		}
 		{
@@ -61,7 +90,110 @@
 		 "heading": "KOTLIN EVERYWHERE",
 		 "description":"Speaker - Mr. Aditya Agarwal",
 		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
-		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",	
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Pierre Hall",
+    		 "myDate": "Friday, July 19 2019",
+    		 "myTime": "9:30 am onwards"
+
+		}
+	]
+	"results2":[	
+		{
+		 "id":1,
+		 "heading": "WORKSHOP ON GSOC",
+		 "description":"Speaker - Mr. Saurabh Thakur",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg",	
+		 "myLink": "Registration Closed",
+   		 "myLocation": "Mooc Hall",
+    		 "myDate": "Thursday, February 5 2020",
+    		 "myTime": "9:30 am onwards"
+
+		}
+		{
+		 "id":2,
+		 "heading": "GITHUB WORKSHOP",
+		 "description":"Speaker - Mr. Yashank",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",
+		 "myLink": "Registration Closed",
+   		 "myLocation": "Mooc Hall",
+    		 "myDate": "Wednesday, January 22 2020",
+    		 "myTime": "9:30 am onwards"
+
+		}
+		{
+		 "id":3,
+		 "heading": "TALK ON WEB TECHNOLOGIES",
+		 "description":"Speaker - Mr. Saurabh Thakur",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Pulitzer Hall",
+    		 "myDate": "Tuesday, November 5 2019",
+    		 "myTime": "9:30 am onwards"
+
+		}
+		{
+		 "id":4,
+		 "heading": "OCTAHACKS 2.0",
+		 "description":"Oraganizer - Chitkara University",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Various Hall",
+    		 "myDate": "Fri-Sat, September 20-21 2019",
+    		 "myTime": "36 Hours"
+
+		}
+		{
+		 "id":5,
+		 "heading": "GOOGLE I/O EXTENDED 2019",
+		 "description":"Speaker - Mr. Kamal Vaid",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Plato Hall",
+    		 "myDate": "Thursday, August 23 2019",
+    		 "myTime": "9:30 am onwards"
+
+
+		}
+		{
+		 "id":6,
+		 "heading": "CODE CHAMP,S4 ",
+		 "description":"Organiser- Chitkara university",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Online",
+    		 "myDate": "Friday, August 9 2019",
+    		 "myTime": "9:30 am onwards"
+
+		}
+		{
+		 "id":7,
+		 "heading": "GSOC Workshop",
+		 "description":"Speaker - Mr. Maandeep Singh",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Faraday Hall",
+    		 "myDate": "Friday, July 26 2019",
+    		 "myTime": "9:30 am onwards"
+
+		}
+		{
+		 "id":8,
+		 "heading": "KOTLIN EVERYWHERE",
+		 "description":"Speaker - Mr. Aditya Agarwal",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",
+		"myLink": "Registration Closed",
+   		 "myLocation": "Pierre Hall",
+    		 "myDate": "Friday, July 19 2019",
+    		 "myTime": "9:30 am onwards"
 
 		}
 	]
