@@ -10,7 +10,7 @@
 		    "githubUrl": "https://github.com/thakursaurabh1998",
 		    "linkedinUrl": "https://linkedin.com/in/thakursaurabh1998",
 		    "twitterUrl": "https://twitter.com/thakursaurabh1998",
-		}
+		},
 		{
 			"id":2,
 			"speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/yashank.jpg",
@@ -21,7 +21,7 @@
 		    "githubUrl": "https://github.com/Yashank18",
 		    "linkedinUrl": "https://linkedin.com/in/",
 		    "twitterUrl": "https://twitter.com/yashank17",
-		}
+		},
 		{
 			"id":3,
 			"speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/muskan.jpg",
@@ -32,7 +32,7 @@
 		    "githubUrl": "https://github.com/goyalmuskan",
 		    "linkedinUrl": "https://linkedin.com/in/goyalmuskan",
 		    "twitterUrl": "https://twitter.com/",
-		}
+		},
 		{
 			"id":4,
 			"speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/saransh.jpg",
@@ -43,7 +43,7 @@
 		    "githubUrl": "https://github.com/saranshdawra",
 		    "linkedinUrl": "https://linkedin.com/in/SaranshDawra",
 		    "twitterUrl": "https://twitter.com/",
-		}
+		},
 		{
 			"id":5,
 			"speakerImage":  "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/satvik.jpg",
@@ -54,7 +54,7 @@
 		    "githubUrl":  "https://github.com/ishaan2908",
 		    "linkedinUrl": "https://linkedin.com/in/ishaan2908",
 		    "twitterUrl": "https://twitter.com/",
-		}
+		},
 		{
 			"id":6,
 			"speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sahil.jpg",
@@ -65,7 +65,7 @@
 		    "githubUrl": "https://github.com/sahilcodes",
 		    "linkedinUrl": "https://linkedin.com/in/sahilcodes",
 		    "twitterUrl": "https://twitter.com/oyesaahil",
-		}
+		},
 		{
 			"id":7,
 			"speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/ishan.jpg",
@@ -76,7 +76,7 @@
 			 "githubUrl": "https://github.com/ishandeveloper",
 			 "linkedinUrl": "https://linkedin.com/in/ishandeveloper",
 			 "twitterUrl": "https://twitter.com/",
-		}
+		},
 		{
 			"id":8,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kushal.jpg",
@@ -87,7 +87,7 @@
 		    "githubUrl": "https://github.com/KushalBhanot",
 		    "linkedinUrl": "https://linkedin.com/in/kushal-bhanot-5495aa88",
 		    "twitterUrl": "https://twitter.com/BhanotKushal",
-		}
+		},
 		{
 			"id":9,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/anmol.jpg",
@@ -98,7 +98,7 @@
 		    "githubUrl": "https://github.com/AnmolSehgal",
 		    "linkedinUrl": "https://linkedin.com/in/anmolsehgal",
 		    "twitterUrl": "https://twitter.com/AnmolSehgal20",
-		}
+		},
 		{
 			"id":10,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/IMG_20200119_175759.jpg",
@@ -109,7 +109,7 @@
 		    "githubUrl": "https://github.com/mridulbhatia0007",
 		    "linkedinUrl": "https://linkedin.com/in/",
 		    "twitterUrl": "https://twitter.com/",
-		}
+		},
 		{
 			"id":11,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/simran.jpg",
@@ -120,7 +120,7 @@
 		    "githubUrl": "https://github.com/simransrivastava01",
 		    "linkedinUrl": "https://linkedin.com/in/simran-shrivastava-1b7b15193",
 		    "twitterUrl": "https://twitter.com/SimranS49844946",
-		}
+		},
 		{
 			"id":12,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/PicsArt_03-29-04.36.37.jpg",
@@ -131,7 +131,7 @@
 		    "githubUrl": "https://github.com/adityasingh7715",
 		    "linkedinUrl": "https://linkedin.com/in/aditya-singh-886866193",
 		    "twitterUrl": "https://twitter.com/adityasingh7716",
-		}
+		},
 		{
 			"id":13,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/tanishq.jpg",
@@ -143,7 +143,7 @@
 		    "linkedinUrl": "https://linkedin.com/in/tanishq-singla-520431192",
 		    "twitterUrl": "https://twitter.com/mainTanishq",
  
-		}
+		},
 		{
 			"id":14,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/sahu.jpg",
@@ -155,7 +155,7 @@
 		    "linkedinUrl": "https://linkedin.com/in/saurabh-sahu-a45634191",
 		    "twitterUrl": "https://twitter.com/Saurabh10725385",
 		 
-		}
+		},
 
 		{
 			"id":15,
@@ -168,7 +168,7 @@
 		    "linkedinUrl": "https://linkedin.com/in/tanishq-singla-520431192",
 		    "twitterUrl": "https://twitter.com/mainTanishq",
  
-		}
+		},
 		{
 			"id":16,
 			"speakerImage":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/image0.jpeg",
@@ -181,7 +181,7 @@
 		    "twitterUrl": "https://twitter.com/",
   
  
-		}
+		},
 		]
 
 
