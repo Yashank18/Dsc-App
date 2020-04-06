@@ -28,6 +28,7 @@ class _teampageState extends State<teampage> {
 
     setState(() {
       // Get the JSON data
+      print("hey");
       data = json.decode(response.body)['results'];
     });
 
@@ -98,7 +99,7 @@ class _teampageState extends State<teampage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Text(
-                                    data[i]['speakerName'],
+                                    data[i].speakerName,
                                     style: TextStyle(color:Colors.black,fontSize:25.0),
                                   ),
                                   SizedBox(
