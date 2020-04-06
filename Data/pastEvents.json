@@ -65,5 +65,71 @@
 
 		}
 	]
+	"results2":[	
+		{
+		 "id":1,
+		 "heading": "WORKSHOP ON GSOC",
+		 "description":"Speaker - Mr. Saurabh Thakur",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg",	
+
+		}
+		{
+		 "id":2,
+		 "heading": "GITHUB WORKSHOP",
+		 "description":"Speaker - Mr. Yashank",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",	
+
+		}
+		{
+		 "id":3,
+		 "heading": "TALK ON WEB TECHNOLOGIES",
+		 "description":"Speaker - Mr. Saurabh Thakur",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/webtech.jpg",	
+
+		}
+		{
+		 "id":4,
+		 "heading": "OCTAHACKS 2.0",
+		 "description":"Oraganizer - Chitkara University",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",	
+
+		}
+		{
+		 "id":5,
+		 "heading": "GOOGLE I/O EXTENDED 2019",
+		 "description":"Speaker - Mr. Kamal Vaid",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",	
+
+		}
+		{
+		 "id":6,
+		 "heading": "CODE CHAMP,S4 ",
+		 "description":"Organiser- Chitkara university",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",	
+
+		}
+		{
+		 "id":7,
+		 "heading": "GSOC Workshop",
+		 "description":"Speaker - Mr. Maandeep Singh",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",	
+
+		}
+		{
+		 "id":8,
+		 "heading": "KOTLIN EVERYWHERE",
+		 "description":"Speaker - Mr. Aditya Agarwal",
+		 "posterUrl":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
+		 "image":"https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",	
+
+		}
+	]
 }
 	
