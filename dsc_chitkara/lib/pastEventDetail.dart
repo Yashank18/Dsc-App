@@ -7,9 +7,15 @@ import 'dart:convert';
 
 
 class PastEvent extends StatefulWidget {
-  final String title;
+  final String heading;
+  final String date;
+  final String time;
+  final String location;
+  final String link;
+  final String desc;
+  final String poster;
   final int id;
-  PastEvent({Key key ,@required this.title, @required this.id}) : super(key: key);
+  PastEvent({Key key ,@required this.poster, @required this.id,@required this.heading,@required this.date,@required this.time,@required this.link,@required this.location,@required this.desc}) : super(key: key);
 
   @override
   _PastEventState createState() => _PastEventState();
@@ -60,9 +66,11 @@ class _PastEventState extends State<PastEvent> {
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
+             
               children: <Widget>[
+                
                 SizedBox(height: screenHeight*0.03,),
-                Container(child:Text(data[widget.id]['myheading'],style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 25,fontWeight: FontWeight.w700)),)),
+                Container(child:Text(widget.heading,style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 20,fontWeight: FontWeight.w700)),)),
                 SizedBox(height: screenHeight*0.03,),
                 Container(
                   child:Row(
@@ -71,7 +79,7 @@ class _PastEventState extends State<PastEvent> {
                       Container(
                         height: screenHeight*0.32,
                         width: screenWidth*0.45,
-                        child: Image(image:CachedNetworkImageProvider(data[widget.id]['posterUrl']),)
+                        child: Image(image:CachedNetworkImageProvider(widget.poster),)
                         ),
                         Container(
                           child: Column(
@@ -79,14 +87,14 @@ class _PastEventState extends State<PastEvent> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
 
-                             Container(child:Text(data[widget.id]['myDate'],style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 13,fontWeight: FontWeight.w800)),)),
-                             Container(child:Text(data[widget.id]['myTime'],style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 12,fontWeight: FontWeight.w100)),)),
+                             Container(child:Text(widget.date,style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 13,fontWeight: FontWeight.w800)),)),
+                             Container(child:Text(widget.time,style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 12,fontWeight: FontWeight.w100)),)),
                              SizedBox(height: screenHeight*0.06,),
                              Container(child:Text("Venue",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 13,fontWeight: FontWeight.w800)),)),
-                             Container(child:Text(data[widget.id]['myLocation'])),
+                             Container(child:Text(widget.location)),
                              SizedBox(height: screenHeight*0.06,),
                              Container(child:Text("Link",style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 13,fontWeight: FontWeight.w800)),)),
-                             Container(child:Text(data[widget.id]['myLink'])),
+                             Container(child:Text(widget.link)),
                             ],
                           ),
                         ),
@@ -95,8 +103,8 @@ class _PastEventState extends State<PastEvent> {
                   )
                 ),
                 SizedBox(height: screenHeight*0.05,),
-                          Card(child: Padding(padding:EdgeInsets.all(20),child: Text(data[widget.id]['description'],style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),)
-              ],
+                          Card(child: Padding(padding:EdgeInsets.all(20),child: Text(widget.desc,style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),)
+                ],
             ),
           )
           

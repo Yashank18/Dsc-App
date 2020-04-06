@@ -165,7 +165,7 @@ Future<bool> _onWillPop(){
                   ],
                 ),
                 SizedBox(height: screenHeight*0.11,),
-                Text("Version 1.0.0"),
+                Text("Version 1.1.0"),
                
                 
               ],
