@@ -72,13 +72,8 @@ Future<bool> _onWillPop(){
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height: screenHeight*0.11,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("Welcome to",style:GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 45,fontWeight: FontWeight.w900,color: Colors.grey.shade700,)))
-                  ],
-                ),
+                SizedBox(height: screenHeight*0.19,),
+                
                 Padding(padding: EdgeInsets.symmetric(horizontal: 15,vertical: 30),child: Image.asset("images/dsc.png",width: screenWidth*0.9,),),
                 SizedBox(height: screenHeight*0.1,),
                 Row(

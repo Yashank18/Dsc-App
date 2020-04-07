@@ -62,18 +62,21 @@ class _HomeEventsState extends State<HomeEvents> {
              Padding(padding:EdgeInsets.only(left: 10),child: Text("Upcoming Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
             SizedBox(height: screenHeight*0.06,),
             Container(
-              height: screenHeight*0.4,
+              height: screenHeight*0.6,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: data == null ? 0 : data.length,
                 shrinkWrap: true,
            itemBuilder: (c, i){
+             if(i==null)
+             return CircularProgressIndicator();
+             else{
              return InkWell(
                onTap: (){
                  Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
+                                builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
                               );
                         },
                      child: Card(
@@ -87,11 +90,11 @@ class _HomeEventsState extends State<HomeEvents> {
                          Container(
                            decoration: new BoxDecoration(
                              
-                             image:DecorationImage(fit: BoxFit.cover,image: CachedNetworkImageProvider(data[i]['image']))
+                             image:DecorationImage(fit: BoxFit.fitHeight,image: CachedNetworkImageProvider(data[i]['posterUrl']))
                            
                            ),
-                           width: screenWidth*0.9,
-                           height: screenHeight*0.27,
+                           width: screenWidth*0.7,
+                           height: screenHeight*0.45,
                            
                          ),
                          SizedBox(height: screenHeight*0.006,),
@@ -101,6 +104,8 @@ class _HomeEventsState extends State<HomeEvents> {
                      ),
                    ),
              );
+             }
+             
            },
            
               )
