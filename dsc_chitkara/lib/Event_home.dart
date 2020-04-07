@@ -73,7 +73,7 @@ class _HomeEventsState extends State<HomeEvents> {
                  Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PastEvent(id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
+                                  builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
                               );
                         },
                      child: Card(
@@ -120,7 +120,7 @@ class _HomeEventsState extends State<HomeEvents> {
                  Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PastEvent(id: data2[i]['id'],date: data2[i]['myDate'],time: data2[i]['myTime'],location: data2[i]['myLocation'],poster: data2[i]['posterUrl'],link: data2[i]['myLink'],heading: data2[i]['heading'],desc: data2[i]['description'],)),
+                                  builder: (context) => PastEvent(shareData:data2[i]['shareData'],speaker:data2[i]['speaker'],id: data2[i]['id'],date: data2[i]['myDate'],time: data2[i]['myTime'],location: data2[i]['myLocation'],poster: data2[i]['posterUrl'],link: data2[i]['myLink'],heading: data2[i]['heading'],desc: data2[i]['description'],)),
                               );
                },
                             child: Card(

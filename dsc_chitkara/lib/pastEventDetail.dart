@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:share/share.dart';
+import 'package:wc_flutter_share/wc_flutter_share.dart';
+import 'package:image_picker_saver/image_picker_saver.dart';
+import 'dart:typed_data';
 
 
 class PastEvent extends StatefulWidget {
@@ -14,8 +18,10 @@ class PastEvent extends StatefulWidget {
   final String link;
   final String desc;
   final String poster;
+  final String shareData;
+  final String speaker;
   final int id;
-  PastEvent({Key key ,@required this.poster, @required this.id,@required this.heading,@required this.date,@required this.time,@required this.link,@required this.location,@required this.desc}) : super(key: key);
+  PastEvent({Key key ,@required this.speaker,@required this.shareData,@required this.poster, @required this.id,@required this.heading,@required this.date,@required this.time,@required this.link,@required this.location,@required this.desc}) : super(key: key);
 
   @override
   _PastEventState createState() => _PastEventState();
@@ -43,7 +49,27 @@ class _PastEventState extends State<PastEvent> {
   void initState() { 
     super.initState();
     this.getJSONData();
+    
   }
+ void _shareImage() async {
+   var rr=await http.get(widget.poster);
+   var filepath= await ImagePickerSaver.saveFile(fileData: rr.bodyBytes);
+   String BASE64_IMAGE=filepath;
+   final ByteData byt=await rootBundle.load(BASE64_IMAGE);
+    try {
+      
+      await WcFlutterShare.share(
+          sharePopupTitle: 'share',
+          subject:'Event by DSC on ${widget.heading}',
+          text:'${widget.shareData}',
+          fileName: 'share.png',
+          mimeType: 'image/png',
+          bytesOfFile: byt.buffer.asUint8List());
+    } catch (e) {
+      print('ERRORR error: $e ${byt.buffer.asUint8List()} and ');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -59,15 +85,7 @@ class _PastEventState extends State<PastEvent> {
           backgroundColor: Colors.white,
           title: new Text("Events",style: GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
            actions: <Widget>[
-             FlatButton(onPressed: (){
-               final RenderBox box = context.findRenderObject();
-                              Share.share(widget.heading+"-"+widget.desc+" *"+widget.location+"*"+" on "+widget.date,
-                                  subject: "subject",
-                                    
-                                  sharePositionOrigin:
-                                      box.localToGlobal(Offset.zero) &
-                                          box.size);
-             }, 
+             FlatButton(onPressed:_shareImage,
              child: Icon(Icons.share))
            ],
         ),
@@ -113,8 +131,16 @@ class _PastEventState extends State<PastEvent> {
                     
                   )
                 ),
-                SizedBox(height: screenHeight*0.05,),
-                          Card(child: Padding(padding:EdgeInsets.all(20),child: Text(widget.desc,style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),)
+               
+                SizedBox(height: screenHeight*0.01,),
+                          Card(child: Padding(padding:EdgeInsets.all(20),child: Text(widget.desc,style: GoogleFonts.varelaRound(textStyle:TextStyle(height: 1.5)),)),),
+                           SizedBox(height: screenHeight*0.03,),
+                          Card(child: Padding(padding:EdgeInsets.all(20),child: Row(
+                            children: <Widget>[
+                              Icon(Icons.speaker),
+                              Text("  Speaker - "+widget.speaker,style: GoogleFonts.varelaRound(textStyle:TextStyle(fontSize: 20)),),
+                            ],
+                          )),),
                 ],
             ),
           )

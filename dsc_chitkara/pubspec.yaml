@@ -30,6 +30,9 @@ dependencies:
   cached_network_image: ^2.0.0
   google_fonts: ^0.3.10
   share: ^0.6.3+6
+  wc_flutter_share: ^0.2.0
+  image_picker_saver: ^0.3.0
+  path_provider: ^1.6.5
   
 dev_dependencies:
   flutter_test:
