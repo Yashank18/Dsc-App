@@ -36,7 +36,10 @@ class _HomeEventsState extends State<HomeEvents> {
     super.initState();
     this.getJSONData();
   }
-
+Future<String> _calculation = Future<String>.delayed(
+    Duration(seconds: 2),
+    () => 'Data Loaded',
+  );
   @override
   Widget build(BuildContext context) {
      double screenHeight = MediaQuery.of(context).size.height;
@@ -56,58 +59,78 @@ class _HomeEventsState extends State<HomeEvents> {
           
         ),
         body: ListView(
-          
+         
           children: <Widget>[
+            
+            
             SizedBox(height: screenHeight*0.06,),
              Padding(padding:EdgeInsets.only(left: 10),child: Text("Upcoming Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
             SizedBox(height: screenHeight*0.06,),
             Container(
               height: screenHeight*0.6,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: data == null ? 0 : data.length,
-                shrinkWrap: true,
+              child: FutureBuilder(
+                future: _calculation,
+                builder: (BuildContext context, AsyncSnapshot<String> snapshot){
+                  if(!snapshot.hasData)
+                  {Container(
+                    height:screenHeight*0.6,
+                   child: Icon(
+                      Icons.check_circle_outline,
+                      color: Colors.green,
+                      size: 60,
+                    )
+                  );
+          
+                  }
+                  
+                   return ListView.builder(
+                 
+                  scrollDirection: Axis.horizontal,
+                  itemCount: data == null ? 0 : data.length,
+                  shrinkWrap: true,
            itemBuilder: (c, i){
-             if(i==null)
-             return CircularProgressIndicator();
-             else{
+             
+            
              return InkWell(
-               onTap: (){
-                 Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
-                              );
-                        },
-                     child: Card(
-                     margin: EdgeInsets.only(left: 7),
-                     elevation: 2.0,
-                     
-                     
-                     child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: <Widget>[
-                         Container(
-                           decoration: new BoxDecoration(
+                 onTap: (){
+                   Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
+                                );
+                          },
+                       child: Card(
+                       margin: EdgeInsets.only(left: 7),
+                       elevation: 2.0,
+                       
+                       
+                       child: Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: <Widget>[
+                           Container(
+                             decoration: new BoxDecoration(
+                               
+                               image:DecorationImage(fit: BoxFit.fitHeight,image: CachedNetworkImageProvider(data[i]['posterUrl']))
                              
-                             image:DecorationImage(fit: BoxFit.fitHeight,image: CachedNetworkImageProvider(data[i]['posterUrl']))
-                           
+                             ),
+                             width: screenWidth*0.7,
+                             height: screenHeight*0.45,
+                             
                            ),
-                           width: screenWidth*0.7,
-                           height: screenHeight*0.45,
-                           
-                         ),
-                         SizedBox(height: screenHeight*0.006,),
-                         Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                         Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(data[i]['description'],style:GoogleFonts.varelaRound()))
-                       ],
+                           SizedBox(height: screenHeight*0.006,),
+                           Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
+                           Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(data[i]['description'],style:GoogleFonts.varelaRound()))
+                         ],
+                       ),
                      ),
-                   ),
              );
-             }
+             
              
            },
            
+                );
+                
+                },
               )
             ),
             SizedBox(height: screenHeight*0.05,),

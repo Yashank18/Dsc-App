@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:share/share.dart';
 import 'package:wc_flutter_share/wc_flutter_share.dart';
 import 'package:image_picker_saver/image_picker_saver.dart';
 import 'dart:typed_data';
@@ -52,11 +51,13 @@ class _PastEventState extends State<PastEvent> {
     
   }
  void _shareImage() async {
-   var rr=await http.get(widget.poster);
-   var filepath= await ImagePickerSaver.saveFile(fileData: rr.bodyBytes);
-   String BASE64_IMAGE=filepath;
-   final ByteData byt=await rootBundle.load(BASE64_IMAGE);
+  
+  var rr=await http.get(widget.poster);
+        var filepath= await ImagePickerSaver.saveFile(fileData: rr.bodyBytes);
+        String BASE64_IMAGE=filepath;
+        final ByteData byt=await rootBundle.load(BASE64_IMAGE);
     try {
+        
       
       await WcFlutterShare.share(
           sharePopupTitle: 'share',
