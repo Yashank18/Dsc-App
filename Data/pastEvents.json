@@ -4,7 +4,7 @@
       "id": 1,
       "heading": "WORKSHOP ON GSOC",
       "speaker":"Mr. Saurabh",
-      "description": "Developer Student Club (DSC), Chitkara University and Department of Computer Science and Engineering, organised a hands-on workshop “KOTLIN EVERYWHERE” on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. ",
+      "description": "Mr. Saurabh Thakur, Software Developer at smallcase and our DSC Lead who completed hisGSoC journey with AOSSIE organisation in 2019, shared his GSoC experience, and his views oncontacting the mentors, working on issues, being active on the IRC channels. Saurabh Thakurlaid emphasis on first understanding the codebase and documentation of the project for workingon issues and new features. Session proved to be fruitful for all students and all their doubtswere cleared regarding GSoC.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg",
       "myLink": "Registration Closed",
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "heading": "GITHUB WORKSHOP",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Yashank",
       "description": "Developer Students Club (DSC), Department of Computer Science and Engineering, conducted the “Git and GitHub Workshop” on 22nd January 2020. Students participated in the event with huge zeal and enthusiasm. Over 150+ students turned out and made this a successful event. Hands on training session allows students to make the transition from the “why” behind a task to the “how”. Session proved to be really fruitful for the participants and now they are ready to commit to an Open Source Project.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",
@@ -43,7 +43,7 @@
     {
       "id": 4,
       "heading": "OCTAHACKS 2.0",
-      "speaker":"Mr. Saurabh",
+      "speaker":"",
       "description": "Chitkara University was transformed into an adrenaline-fuelled zone for 30 hours, as over 250 students from various universities participated in hackathon challenge - Octahacks 2.0, organised by Developer Student Clubs. OctaHacks is the annual flagship event of DSC where students get a unique opportunity to merge their creative ideas with their technical skills to build something exemplary. It's a place where all ideas get acknowledged. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",
@@ -56,7 +56,7 @@
     {
       "id": 5,
       "heading": "GOOGLE I/O EXTENDED 2019",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Kamal Vaid",
       "description": "Google I/O Extended 2019, another event organised by Developer Student Clubs, was successfully conducted on 23 August, 2019. It was a morning filled with tech talks featuring an eminent speaker, Mr. Kamal Vaid, Technology lead at Infosys, Chandigarh. Kamal Vaid sir is lead at GDG, Chandigarh and GDE for Google Assistant. The speaker gave the students a look at Google's latest developer products. He gave an insight about all the new features in Android, Google assistant, Web, Search, Cloud and much more. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",
@@ -69,7 +69,7 @@
     {
       "id": 6,
       "heading": "CODE CHAMP,S4 ",
-      "speaker":"Mr. Saurabh",
+      "speaker":"",
       "description": "NINJAS! CODING NINJAS along with Developer Student Clubs, Chitkara University, hosted an online coding competition CODE CHAMP, Season 4, on 9th August 2019. More than 200 students participated in this competition. We gladly announce our winners, who won goodies from Coding Ninjas.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",
@@ -82,7 +82,7 @@
     {
       "id": 7,
       "heading": "GSOC Workshop",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Maandeep Singh",
       "description": "Developer Students Club (DSC), Department of Computer Science and Engineering, organised a talk on “Google Summer of Code (GSoC)” with Maandeep Singh. GSoC is a global program focused on bringing more student developers into open source software development. During this session, Maandeep Singh, who is a part of GSoC 2019, shared his experience with the students, guiding and motivating them to be a part of the upcoming GSoC competitive program. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",
@@ -95,7 +95,7 @@
     {
       "id": 8,
       "heading": "KOTLIN EVERYWHERE",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Aditya Aggarwal",
       "description": "Developer Student Club (DSC), Chitkara University and Department of Computer Science and Engineering, organised a hands-on workshop “KOTLIN EVERYWHERE” on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. The workshop focused on the potential of Kotlin on all platforms.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",
@@ -107,11 +107,11 @@
     }
   ],
   "results2": [
-    {
+     {
       "id": 1,
       "heading": "WORKSHOP ON GSOC",
       "speaker":"Mr. Saurabh",
-      "description": "Developer Student Club (DSC), Chitkara University and Department of Computer Science and Engineering, organised a hands-on workshop “KOTLIN EVERYWHERE” on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. ",
+      "description": "Mr. Saurabh Thakur, Software Developer at smallcase and our DSC Lead who completed hisGSoC journey with AOSSIE organisation in 2019, shared his GSoC experience, and his views oncontacting the mentors, working on issues, being active on the IRC channels. Saurabh Thakurlaid emphasis on first understanding the codebase and documentation of the project for workingon issues and new features. Session proved to be fruitful for all students and all their doubtswere cleared regarding GSoC.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocS.jpg",
       "myLink": "Registration Closed",
@@ -124,7 +124,7 @@
     {
       "id": 2,
       "heading": "GITHUB WORKSHOP",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Yashank",
       "description": "Developer Students Club (DSC), Department of Computer Science and Engineering, conducted the “Git and GitHub Workshop” on 22nd January 2020. Students participated in the event with huge zeal and enthusiasm. Over 150+ students turned out and made this a successful event. Hands on training session allows students to make the transition from the “why” behind a task to the “how”. Session proved to be really fruitful for the participants and now they are ready to commit to an Open Source Project.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/github.jpg",
@@ -150,7 +150,7 @@
     {
       "id": 4,
       "heading": "OCTAHACKS 2.0",
-      "speaker":"Mr. Saurabh",
+      "speaker":"",
       "description": "Chitkara University was transformed into an adrenaline-fuelled zone for 30 hours, as over 250 students from various universities participated in hackathon challenge - Octahacks 2.0, organised by Developer Student Clubs. OctaHacks is the annual flagship event of DSC where students get a unique opportunity to merge their creative ideas with their technical skills to build something exemplary. It's a place where all ideas get acknowledged. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/octahacks2.jpg",
@@ -163,7 +163,7 @@
     {
       "id": 5,
       "heading": "GOOGLE I/O EXTENDED 2019",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Kamal Vaid",
       "description": "Google I/O Extended 2019, another event organised by Developer Student Clubs, was successfully conducted on 23 August, 2019. It was a morning filled with tech talks featuring an eminent speaker, Mr. Kamal Vaid, Technology lead at Infosys, Chandigarh. Kamal Vaid sir is lead at GDG, Chandigarh and GDE for Google Assistant. The speaker gave the students a look at Google's latest developer products. He gave an insight about all the new features in Android, Google assistant, Web, Search, Cloud and much more. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/Extended.jpg",
@@ -176,7 +176,7 @@
     {
       "id": 6,
       "heading": "CODE CHAMP,S4 ",
-      "speaker":"Mr. Saurabh",
+      "speaker":"",
       "description": "NINJAS! CODING NINJAS along with Developer Student Clubs, Chitkara University, hosted an online coding competition CODE CHAMP, Season 4, on 9th August 2019. More than 200 students participated in this competition. We gladly announce our winners, who won goodies from Coding Ninjas.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/cChamp.jpg",
@@ -189,7 +189,7 @@
     {
       "id": 7,
       "heading": "GSOC Workshop",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Maandeep Singh",
       "description": "Developer Students Club (DSC), Department of Computer Science and Engineering, organised a talk on “Google Summer of Code (GSoC)” with Maandeep Singh. GSoC is a global program focused on bringing more student developers into open source software development. During this session, Maandeep Singh, who is a part of GSoC 2019, shared his experience with the students, guiding and motivating them to be a part of the upcoming GSoC competitive program. ",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/gsocM.jpg",
@@ -202,7 +202,7 @@
     {
       "id": 8,
       "heading": "KOTLIN EVERYWHERE",
-      "speaker":"Mr. Saurabh",
+      "speaker":"Mr. Aditya Aggarwal",
       "description": "Developer Student Club (DSC), Chitkara University and Department of Computer Science and Engineering, organised a hands-on workshop “KOTLIN EVERYWHERE” on Kotlin - Google’s official language for android development, on 19th July, 2019. Mr. Aditya Aggarwal, Software Developer at OYO and former Chitkara DSC lead, addressed the audience, familiarising the students with basic and intermediate levels of Kotlin. The workshop focused on the potential of Kotlin on all platforms.",
       "posterUrl": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin_poster.jpg",
       "image": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/kotlin.jpg",

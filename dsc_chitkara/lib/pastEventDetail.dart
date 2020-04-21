@@ -4,9 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:wc_flutter_share/wc_flutter_share.dart';
-import 'package:image_picker_saver/image_picker_saver.dart';
-import 'dart:typed_data';
+import 'package:share/share.dart';
 
 
 class PastEvent extends StatefulWidget {
@@ -50,26 +48,7 @@ class _PastEventState extends State<PastEvent> {
     this.getJSONData();
     
   }
- void _shareImage() async {
-  
-  var rr=await http.get(widget.poster);
-        var filepath= await ImagePickerSaver.saveFile(fileData: rr.bodyBytes);
-        String BASE64_IMAGE=filepath;
-        final ByteData byt=await rootBundle.load(BASE64_IMAGE);
-    try {
-        
-      
-      await WcFlutterShare.share(
-          sharePopupTitle: 'share',
-          subject:'Event by DSC on ${widget.heading}',
-          text:'${widget.shareData}',
-          fileName: 'share.png',
-          mimeType: 'image/png',
-          bytesOfFile: byt.buffer.asUint8List());
-    } catch (e) {
-      print('ERRORR error: $e ${byt.buffer.asUint8List()} and ');
-    }
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +65,14 @@ class _PastEventState extends State<PastEvent> {
           backgroundColor: Colors.white,
           title: new Text("Events",style: GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
            actions: <Widget>[
-             FlatButton(onPressed:_shareImage,
+             FlatButton(onPressed:() {
+                              final RenderBox box = context.findRenderObject();
+                              Share.share("${widget.shareData}",
+                                  subject: "${widget.heading}",
+                                  sharePositionOrigin:
+                                      box.localToGlobal(Offset.zero) &
+                                          box.size);
+                            },
              child: Icon(Icons.share))
            ],
         ),

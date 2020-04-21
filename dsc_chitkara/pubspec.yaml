@@ -29,7 +29,7 @@ dependencies:
   url_launcher: ^5.4.2
   cached_network_image: ^2.0.0
   google_fonts: ^0.3.10
-  wc_flutter_share: ^0.2.0
+  share: ^0.6.4
   image_picker_saver: ^0.3.0
   path_provider: ^1.6.5
   

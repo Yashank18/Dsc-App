@@ -119,7 +119,7 @@ Future<String> _calculation = Future<String>.delayed(
                            ),
                            SizedBox(height: screenHeight*0.006,),
                            Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                           Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(data[i]['description'],style:GoogleFonts.varelaRound()))
+                           Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text("Speaker - "+data[i]['speaker'],style:GoogleFonts.varelaRound()))
                          ],
                        ),
                      ),
@@ -171,7 +171,7 @@ Future<String> _calculation = Future<String>.delayed(
                          ),
                          SizedBox(height: screenHeight*0.006,),
                          Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data2[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                         Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text(data2[i]['description'],style:GoogleFonts.varelaRound()))
+                         Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text("Speaker - "+ data2[i]['speaker'],style:GoogleFonts.varelaRound()))
                        ],
                      ),
                    ),
