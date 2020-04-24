@@ -4,6 +4,11 @@ Official App for Developer Student Clubs, Chitkara University
 #### Start Learning 
 * [Documenatation](https://flutter.dev/docs)
 
+
+## Screenshots
+<img width="30%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80245963-471dd380-8689-11ea-8606-fec13dfbd932.png">&nbsp; &nbsp;&nbsp; &nbsp;<img width="30%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246489-1db17780-868a-11ea-93f9-2a3e40c41bd6.png">&nbsp; &nbsp;&nbsp; &nbsp;<img width="30%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246500-24d88580-868a-11ea-8bba-fd228c34eb56.png">&nbsp; &nbsp;&nbsp; &nbsp;
+<img width="30%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246152-949a4080-8689-11ea-85d1-e2cef402b24c.png">&nbsp; &nbsp;&nbsp; &nbsp;<img width="36%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246955-e8595980-868a-11ea-806f-9f8394ad7557.gif">
+
 ## To get Started
 
   ##### Clone the repository
