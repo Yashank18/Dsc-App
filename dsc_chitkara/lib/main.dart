@@ -1,6 +1,5 @@
 import 'package:dsc_chitkara/Event_home.dart';
 import 'package:dsc_chitkara/aboutUs.dart';
-import 'package:dsc_chitkara/events.dart';
 import 'package:dsc_chitkara/pastEventDetail.dart';
 import 'package:dsc_chitkara/resources.dart';
 import 'package:dsc_chitkara/teampage.dart';
