@@ -10,7 +10,7 @@ Official App for Developer Student Clubs, Chitkara University
 <img width="30%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246152-949a4080-8689-11ea-85d1-e2cef402b24c.png">&nbsp; &nbsp;&nbsp; &nbsp;<img width="36%" alt="portfolio_view" src="https://user-images.githubusercontent.com/46098062/80246955-e8595980-868a-11ea-806f-9f8394ad7557.gif">
 
 ## Download APk
- [Click Here](https://github.com/Yashank18/Dsc-App/Apk/)
+ [Click Here](https://github.com/Yashank18/Dsc-App/tree/master/Apk)
 
 ## To get Started
 
