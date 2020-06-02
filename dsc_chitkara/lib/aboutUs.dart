@@ -2,6 +2,7 @@ import 'package:dsc_chitkara/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUs extends StatefulWidget {
   AboutUs({Key key}) : super(key: key);
@@ -48,7 +49,7 @@ class _AboutUsState extends State<AboutUs> {
                   color:Colors.red.shade400
                   ),
                   onPressed: () {
-                                        
+                      launch("https://www.instagram.com/dsc_ciet/"); 
                   },
                  ),
                   IconButton(
@@ -58,7 +59,7 @@ class _AboutUsState extends State<AboutUs> {
                   color:Colors.blue.shade400
                   ),
                   onPressed: () {
-                                        
+                      launch("https://www.facebook.com/gdsc.cu/");                  
                   },
                  ),
                   IconButton(
@@ -68,12 +69,12 @@ class _AboutUsState extends State<AboutUs> {
                   color:Colors.black
                   ),
                   onPressed: () {
-                                        
+                    launch("https://github.com/DSC-ChitkaraUniv");
                   },
                  ),
                ],
              ),
-             SizedBox(height: screenHeight*0.02,),
+             SizedBox(height: screenHeight*0.05,),
           ]
         ),
       ),

@@ -55,6 +55,7 @@ class _resourcesState extends State<resources> {
         body: Container(
           color: Colors.white,
           child:ListView.builder(
+            physics: BouncingScrollPhysics(),
             shrinkWrap: true,
             itemCount: data==null?0:data.length,
            itemBuilder: (c, i){

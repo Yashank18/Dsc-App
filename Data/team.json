@@ -48,6 +48,17 @@
     {
       "id": 5,
       "speakerImage": "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Images/satvik.jpg",
+      "speakerName": "Satvik",
+      "speakerDesc": "Member",
+      "speakerWork": "Frontend Developer",
+      "fbUrl": "https://facebook.com/",
+      "githubUrl": "https://github.com/satvikchachra",
+      "linkedinUrl": "https://linkedin.com/in/",
+      "twitterUrl": "https://twitter.com/"
+    },
+    {
+      "id": 5,
+      "speakerImage": "https://github.com/Yashank18/Dsc-App/blob/master/Images/ishaan.jpg",
       "speakerName": "Ishaan",
       "speakerDesc": "Member",
       "speakerWork": "Public Relations",
