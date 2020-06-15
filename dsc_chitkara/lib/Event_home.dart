@@ -45,8 +45,8 @@ Future<String> _calculation = Future<String>.delayed(
      double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth= MediaQuery.of(context).size.width;
     return WillPopScope(
-       onWillPop: (){
-       Navigator.of(context).pop();
+       onWillPop: () {
+        Navigator.of(context).pop();
       },
       child:Scaffold(
         appBar: new AppBar(
