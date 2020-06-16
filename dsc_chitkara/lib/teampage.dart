@@ -14,53 +14,51 @@ class TeamPage extends StatefulWidget {
 }
 
 class _TeamPageState extends State<TeamPage> {
-
-
-
-    List data;
+  List data;
 
   // Function to get the JSON data
   Future<String> getJSONData() async {
     var response = await http.get(
-      Uri.encodeFull("https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Data/team.json"),
+      Uri.encodeFull(
+          "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Data/team.json"),
     );
 
     setState(() {
       // Get the JSON data
-      print("hey");
       data = json.decode(response.body)['results'];
     });
 
     return "Successfull";
   }
+
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     this.getJSONData();
   }
 
   @override
   Widget build(BuildContext context) {
-
     return WillPopScope(
-      onWillPop: (){
-       Navigator.of(context).pop();
+      onWillPop: () {
+        Navigator.of(context).pop();
       },
-          child: Scaffold(
+      child: Scaffold(
         appBar: new AppBar(
           leading: new FlatButton(
-            child: Icon(Icons.arrow_back_ios,color: Colors.black),
-            onPressed: (){
-               Navigator.of(context).pop();
+            child: Icon(Icons.arrow_back_ios, color: Colors.black),
+            onPressed: () {
+              Navigator.of(context).pop();
             },
           ),
-          title: new Text('Team',style:GoogleFonts.varelaRound(textStyle:TextStyle(color:Colors.black))),
-           backgroundColor: Colors.white,
+          title: new Text('Team',
+              style: GoogleFonts.varelaRound(
+                  textStyle: TextStyle(color: Colors.black))),
+          backgroundColor: Colors.white,
         ),
         body: Container(
           color: Colors.white,
           child: ListView.builder(
-            
             shrinkWrap: true,
             itemCount: data == null ? 0 : data.length,
             itemBuilder: (c, i) {
@@ -78,16 +76,15 @@ class _TeamPageState extends State<TeamPage> {
                             width: MediaQuery.of(context).size.width * 0.3,
                           ),
                           child: Image(
-                      image: CachedNetworkImageProvider(
-                        data[i]['speakerImage'],
-                      ),),
-                          
+                            image: CachedNetworkImageProvider(
+                              data[i]['speakerImage'],
+                            ),
+                          ),
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         Expanded(
-                          
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -99,14 +96,16 @@ class _TeamPageState extends State<TeamPage> {
                                 children: <Widget>[
                                   Text(
                                     data[i]['speakerName'],
-                                    style: TextStyle(color:Colors.black,fontSize:25.0),
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 25.0),
                                   ),
                                   SizedBox(
                                     height: 5,
                                   ),
                                   AnimatedContainer(
                                     duration: Duration(seconds: 1),
-                                    width: MediaQuery.of(context).size.width * 0.3,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.3,
                                     height: 5,
                                     color: Color.fromRGBO(251, 219, 134, 1),
                                   ),
@@ -117,45 +116,41 @@ class _TeamPageState extends State<TeamPage> {
                               ),
                               Text(
                                 data[i]['speakerDesc'],
-                                style: TextStyle(color:Colors.grey,fontSize:17.0),
+                                style: TextStyle(
+                                    color: Colors.grey, fontSize: 17.0),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 data[i]['speakerWork'],
-                                style:TextStyle(color:Colors.red,fontSize:12.0),
+                                style: TextStyle(
+                                    color: Colors.red, fontSize: 12.0),
                               ),
                               FittedBox(
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     IconButton(
-                                      icon: Icon(
-                                        FontAwesomeIcons.facebookF,
-                                        size: 15,
-                                        color:Colors.indigo
-                                      ),
+                                      icon: Icon(FontAwesomeIcons.facebookF,
+                                          size: 15, color: Colors.indigo),
                                       onPressed: () {
                                         launch(data[i]['fbUrl']);
                                       },
                                     ),
                                     IconButton(
-                                      icon: Icon(
-                                        FontAwesomeIcons.twitter,
-                                        size: 15,
-                                        color:Colors.blue.shade100
-                                      ),
+                                      icon: Icon(FontAwesomeIcons.twitter,
+                                          size: 15,
+                                          color: Colors.blue.shade100),
                                       onPressed: () {
                                         launch(data[i]['twitterUrl']);
                                       },
                                     ),
                                     IconButton(
-                                      icon: Icon(
-                                        FontAwesomeIcons.linkedinIn,
-                                        size: 15,
-                                        color:Colors.blue.shade700
-                                      ),
+                                      icon: Icon(FontAwesomeIcons.linkedinIn,
+                                          size: 15,
+                                          color: Colors.blue.shade700),
                                       onPressed: () {
                                         launch(data[i]['linkedinUrl']);
                                       },
@@ -164,7 +159,7 @@ class _TeamPageState extends State<TeamPage> {
                                       icon: Icon(
                                         FontAwesomeIcons.github,
                                         size: 15,
-                                        color:Colors.black,
+                                        color: Colors.black,
                                       ),
                                       onPressed: () {
                                         launch(data[i]['githubUrl']);
@@ -180,17 +175,9 @@ class _TeamPageState extends State<TeamPage> {
                     )),
               );
             },
-            
           ),
         ),
-        
       ),
     );
-    
-    
-    
   }
 }
-
-
-

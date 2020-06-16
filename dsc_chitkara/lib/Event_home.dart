@@ -13,177 +13,246 @@ class HomeEvents extends StatefulWidget {
 }
 
 class _HomeEventsState extends State<HomeEvents> {
-
   List data;
   List data2;
 
   // Function to get the JSON data
   Future<String> getJSONData() async {
     var response = await http.get(
-      Uri.encodeFull("https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Data/pastEvents.json"),
+      Uri.encodeFull(
+          "https://raw.githubusercontent.com/Yashank18/Dsc-App/master/Data/pastEvents.json"),
     );
 
     setState(() {
       // Get the JSON data
-      data  = json.decode(response.body)['results'];
-      data2 =json.decode(response.body)['results2'];
+      data = json.decode(response.body)['results'];
+      data2 = json.decode(response.body)['results2'];
     });
 
     return "Successfull";
   }
-   @override
-  void initState() { 
+
+  @override
+  void initState() {
     super.initState();
     this.getJSONData();
   }
-Future<String> _calculation = Future<String>.delayed(
+
+  Future<String> _calculation = Future<String>.delayed(
     Duration(seconds: 2),
     () => 'Data Loaded',
   );
   @override
   Widget build(BuildContext context) {
-     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth= MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return WillPopScope(
-       onWillPop: () {
-        Navigator.of(context).pop();
-      },
-      child:Scaffold(
-        appBar: new AppBar(
-          backgroundColor: Colors.white,
-          leading: FlatButton(
-            child: Icon(Icons.arrow_back_ios,),onPressed: (){
-               Navigator.of(context).pop();
-            },),
-          title: Text("Events",style: GoogleFonts.varelaRound(textStyle: TextStyle(color:Colors.black,),)),
-          
-        ),
-        body: ListView(
-         
-          children: <Widget>[
-            
-            
-            SizedBox(height: screenHeight*0.06,),
-             Padding(padding:EdgeInsets.only(left: 10),child: Text("Upcoming Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
-            SizedBox(height: screenHeight*0.06,),
-            Container(
-              height: screenHeight*0.6,
-              child: FutureBuilder(
-                future: _calculation,
-                builder: (BuildContext context, AsyncSnapshot<String> snapshot){
-                  if(!snapshot.hasData)
-                  {Container(
-                    height:screenHeight*0.6,
-                   child: Icon(
-                      Icons.check_circle_outline,
-                      color: Colors.green,
-                      size: 60,
-                    )
-                  );
-          
-                  }
-                  
-                   return ListView.builder(
-                 
-                  scrollDirection: Axis.horizontal,
-                  itemCount: data == null ? 0 : data.length,
-                  shrinkWrap: true,
-           itemBuilder: (c, i){
-             
-            
-             return InkWell(
-                 onTap: (){
-                   Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                  builder: (context) => PastEvent(shareData:data[i]['shareData'],speaker:data2[i]['speaker'],id: data[i]['id'],date: data[i]['myDate'],time: data[i]['myTime'],location: data[i]['myLocation'],poster: data[i]['posterUrl'],link: data[i]['myLink'],heading: data[i]['heading'],desc: data[i]['description'],)),
-                                );
-                          },
-                       child: Card(
-                       margin: EdgeInsets.only(left: 7),
-                       elevation: 2.0,
-                       
-                       
-                       child: Column(
-                         crossAxisAlignment: CrossAxisAlignment.start,
-                         children: <Widget>[
-                           Container(
-                             decoration: new BoxDecoration(
-                               
-                               image:DecorationImage(fit: BoxFit.fitHeight,image: CachedNetworkImageProvider(data[i]['posterUrl']))
-                             
-                             ),
-                             width: screenWidth*0.7,
-                             height: screenHeight*0.45,
-                             
-                           ),
-                           SizedBox(height: screenHeight*0.006,),
-                           Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                           Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text("Speaker - "+data[i]['speaker'],style:GoogleFonts.varelaRound()))
-                         ],
-                       ),
-                     ),
-             );
-             
-             
-           },
-           
-                );
-                
-                },
-              )
+        onWillPop: () {
+          Navigator.of(context).pop();
+        },
+        child: Scaffold(
+          appBar: new AppBar(
+            backgroundColor: Colors.white,
+            leading: FlatButton(
+              child: Icon(
+                Icons.arrow_back_ios,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
             ),
-            SizedBox(height: screenHeight*0.05,),
-             Padding(padding:EdgeInsets.only(left: 10),child: Text("Past Events",style: GoogleFonts.openSans(textStyle:TextStyle(fontWeight: FontWeight.w700,fontSize: 25)),textAlign: TextAlign.left,)),
-            SizedBox(height: screenHeight*0.05,),
-            Container(
-              height: screenHeight*0.4,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: data == null ? 0 : data2.length,
-                shrinkWrap: true,
-           itemBuilder: (c, i){
-             return InkWell(
-               onTap: (){
-                 Navigator.push(
+            title: Text("Events",
+                style: GoogleFonts.varelaRound(
+                  textStyle: TextStyle(
+                    color: Colors.black,
+                  ),
+                )),
+          ),
+          body: ListView(
+            children: <Widget>[
+              SizedBox(
+                height: screenHeight * 0.06,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    "Upcoming Events",
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 25)),
+                    textAlign: TextAlign.left,
+                  )),
+              SizedBox(
+                height: screenHeight * 0.06,
+              ),
+              Container(
+                  height: screenHeight * 0.6,
+                  child: FutureBuilder(
+                    future: _calculation,
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData) {
+                        Container(
+                            height: screenHeight * 0.6,
+                            child: Icon(
+                              Icons.check_circle_outline,
+                              color: Colors.green,
+                              size: 60,
+                            ));
+                      }
+
+                      return ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: data == null ? 0 : data.length,
+                        shrinkWrap: true,
+                        itemBuilder: (c, i) {
+                          return InkWell(
+                            onTap: () {
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PastEvent(shareData:data2[i]['shareData'],speaker:data2[i]['speaker'],id: data2[i]['id'],date: data2[i]['myDate'],time: data2[i]['myTime'],location: data2[i]['myLocation'],poster: data2[i]['posterUrl'],link: data2[i]['myLink'],heading: data2[i]['heading'],desc: data2[i]['description'],)),
+                                    builder: (context) => PastEvent(
+                                          shareData: data[i]['shareData'],
+                                          speaker: data2[i]['speaker'],
+                                          id: data[i]['id'],
+                                          date: data[i]['myDate'],
+                                          time: data[i]['myTime'],
+                                          location: data[i]['myLocation'],
+                                          poster: data[i]['posterUrl'],
+                                          link: data[i]['myLink'],
+                                          heading: data[i]['heading'],
+                                          desc: data[i]['description'],
+                                        )),
                               );
-               },
+                            },
                             child: Card(
-                     margin: EdgeInsets.only(left: 7),
-                     elevation: 2.0,
-                     
-                     
-                     child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: <Widget>[
-                         Container(
-                           decoration: new BoxDecoration(
-                             
-                             image:DecorationImage(fit: BoxFit.cover,image: CachedNetworkImageProvider(data2[i]['image']))
-                           
-                           ),
-                           width: screenWidth*0.9,
-                           height: screenHeight*0.27,
-                           
-                         ),
-                         SizedBox(height: screenHeight*0.006,),
-                         Padding(padding:EdgeInsets.symmetric(horizontal:10,vertical: 5),child: Text(data2[i]['heading'],style: GoogleFonts.openSans(textStyle:TextStyle(fontSize: 20.0,fontWeight: FontWeight.w800)),textAlign: TextAlign.left)),
-                         Padding(padding: EdgeInsets.symmetric(horizontal: 10,),child:Text("Speaker - "+ data2[i]['speaker'],style:GoogleFonts.varelaRound()))
-                       ],
-                     ),
-                   ),
-             );
-           },
-          
-              )
-            ),
-            SizedBox(height: screenHeight*0.05,),
-          ],
-        ),
-      )
-    );
+                              margin: EdgeInsets.only(left: 7),
+                              elevation: 2.0,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Container(
+                                    decoration: new BoxDecoration(
+                                        image: DecorationImage(
+                                            fit: BoxFit.fitHeight,
+                                            image: CachedNetworkImageProvider(
+                                                data[i]['posterUrl']))),
+                                    width: screenWidth * 0.7,
+                                    height: screenHeight * 0.45,
+                                  ),
+                                  SizedBox(
+                                    height: screenHeight * 0.006,
+                                  ),
+                                  Padding(
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 10, vertical: 5),
+                                      child: Text(data[i]['heading'],
+                                          style: GoogleFonts.openSans(
+                                              textStyle: TextStyle(
+                                                  fontSize: 20.0,
+                                                  fontWeight: FontWeight.w800)),
+                                          textAlign: TextAlign.left)),
+                                  Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 10,
+                                      ),
+                                      child: Text(
+                                          "Speaker - " + data[i]['speaker'],
+                                          style: GoogleFonts.varelaRound()))
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  )),
+              SizedBox(
+                height: screenHeight * 0.05,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    "Past Events",
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 25)),
+                    textAlign: TextAlign.left,
+                  )),
+              SizedBox(
+                height: screenHeight * 0.05,
+              ),
+              Container(
+                  height: screenHeight * 0.4,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: data == null ? 0 : data2.length,
+                    shrinkWrap: true,
+                    itemBuilder: (c, i) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PastEvent(
+                                      shareData: data2[i]['shareData'],
+                                      speaker: data2[i]['speaker'],
+                                      id: data2[i]['id'],
+                                      date: data2[i]['myDate'],
+                                      time: data2[i]['myTime'],
+                                      location: data2[i]['myLocation'],
+                                      poster: data2[i]['posterUrl'],
+                                      link: data2[i]['myLink'],
+                                      heading: data2[i]['heading'],
+                                      desc: data2[i]['description'],
+                                    )),
+                          );
+                        },
+                        child: Card(
+                          margin: EdgeInsets.only(left: 7),
+                          elevation: 2.0,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                decoration: new BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: CachedNetworkImageProvider(
+                                            data2[i]['image']))),
+                                width: screenWidth * 0.9,
+                                height: screenHeight * 0.27,
+                              ),
+                              SizedBox(
+                                height: screenHeight * 0.006,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 5),
+                                  child: Text(data2[i]['heading'],
+                                      style: GoogleFonts.openSans(
+                                          textStyle: TextStyle(
+                                              fontSize: 20.0,
+                                              fontWeight: FontWeight.w800)),
+                                      textAlign: TextAlign.left)),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                  ),
+                                  child: Text(
+                                      "Speaker - " + data2[i]['speaker'],
+                                      style: GoogleFonts.varelaRound()))
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  )),
+              SizedBox(
+                height: screenHeight * 0.05,
+              ),
+            ],
+          ),
+        ));
   }
 }
